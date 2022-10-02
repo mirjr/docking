@@ -1,1 +1,1 @@
-Autodock 4 va Vina dasturlari orqali a-amilaza fermenti doking natijalari
+> Docking orqali ligand molekulasini oqsilning faol markaziga joylashtirish natijalari.
