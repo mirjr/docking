@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /usr/bin/bash
 
 for f in ./ligands/ligand_*.pdbqt; do
 	b=`basename $f .pdbqt`
