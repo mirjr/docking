@@ -1,0 +1,1309 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Jul 18 2014 at 15:34:58
+
+
+This file was created at:			10:51 04" a.m., 12/16/2022
+                   on host:		"DEV"
+Current Working Directory = "D:\Documents\github\bioinformatics\docking\autodock\05-AST\anestezin"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 10656, 1671169864.
+Docking parameter file (DPF) used for this docking:		D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 10656, 1671169864.
+DPF> ligand_types A C HD OA N             # atoms types in ligand
+
+DPF> fld receptor.maps.fld                # grid_data_file
+
+Opening Grid Map Dimensions file:		receptor.maps.fld
+Grid Point Spacing =				0.500 Angstroms
+
+Even Number of User-specified Grid Points =	40 x-points
+						40 y-points
+						40 z-points
+
+Coordinates of Central Grid Point of Maps =	(-0.024, 41.650, 24.128)
+Macromolecule file used to create Grid Maps =	receptor.pdbqt
+Grid Parameter file used to create Grid Maps =	D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/g.gpf
+Minimum coordinates in grid = (-10.024, 31.650, 14.128)
+Maximum coordinates in grid = (9.976, 51.650, 34.128)
+
+DPF> map receptor.A.map                   # atom-specific affinity map
+
+DPF> map receptor.C.map                   # atom-specific affinity map
+
+DPF> map receptor.HD.map                  # atom-specific affinity map
+
+DPF> map receptor.OA.map                  # atom-specific affinity map
+
+DPF> map receptor.N.map                   # atom-specific affinity map
+
+DPF> elecmap receptor.e.map               # electrostatics map
+
+DPF> desolvmap receptor.d.map             # desolvation map
+
+DPF> move ligand_anestezin.pdbqt          # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "ligand_anestezin.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  4 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: O_1  and  C_10 
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: O_1  and  C_11 
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: N_3  and  C_7 
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: C_4  and  C_10 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: HETATM    1  O   UNK     0      -2.113  -0.357   0.001  0.00  0.00    -0.318 OA
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   1   2
+INPUT-LIGAND-PDBQT: HETATM    2  C   UNK     0      -1.296   0.741   0.001  0.00  0.00     0.293 C 
+INPUT-LIGAND-PDBQT: HETATM    3  O   UNK     0      -1.706   1.909   0.000  0.00  0.00    -0.259 OA
+INPUT-LIGAND-PDBQT: BRANCH   2   4
+INPUT-LIGAND-PDBQT: HETATM    4  C   UNK     0       0.108   0.362   0.001  0.00  0.00     0.039 A 
+INPUT-LIGAND-PDBQT: HETATM    5  C   UNK     0       1.096   1.347  -0.000  0.00  0.00     0.020 A 
+INPUT-LIGAND-PDBQT: HETATM    6  C   UNK     0       2.443   0.983  -0.001  0.00  0.00     0.030 A 
+INPUT-LIGAND-PDBQT: HETATM    7  C   UNK     0       2.802  -0.365  -0.000  0.00  0.00     0.025 A 
+INPUT-LIGAND-PDBQT: HETATM    8  C   UNK     0       1.814  -1.349   0.001  0.00  0.00     0.030 A 
+INPUT-LIGAND-PDBQT: HETATM    9  C   UNK     0       0.467  -0.986   0.001  0.00  0.00     0.020 A 
+INPUT-LIGAND-PDBQT: BRANCH   7  10
+INPUT-LIGAND-PDBQT: HETATM   10  N   UNK     0       4.163  -0.732  -0.001  0.00  0.00    -0.399 N 
+INPUT-LIGAND-PDBQT: HETATM   11  H   UNK     0       4.424  -1.709   0.000  0.00  0.00     0.156 HD
+INPUT-LIGAND-PDBQT: HETATM   12  H   UNK     0       4.880  -0.018  -0.001  0.00  0.00     0.156 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH   7  10
+INPUT-LIGAND-PDBQT: ENDBRANCH   2   4
+INPUT-LIGAND-PDBQT: ENDBRANCH   1   2
+INPUT-LIGAND-PDBQT: BRANCH   1  13
+INPUT-LIGAND-PDBQT: HETATM   13  C   UNK     0      -3.524  -0.113  -0.001  0.00  0.00     0.174 C 
+INPUT-LIGAND-PDBQT: HETATM   14  C   UNK     0      -4.253  -1.439  -0.001  0.00  0.00     0.034 C 
+INPUT-LIGAND-PDBQT: ENDBRANCH   1  13
+INPUT-LIGAND-PDBQT: TORSDOF 4
+________________________________________________________________________________
+
+Total charge on ligand                               =	+0.001 e
+REMARK  4 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_10 
+REMARK    2  A    between atoms: O_1  and  C_11 
+REMARK    3  A    between atoms: N_3  and  C_7 
+REMARK    4  A    between atoms: C_4  and  C_10 
+
+
+Number of Rotatable Bonds in Small Molecule =	4 torsions
+Number of atoms in ligand:  14
+
+Number of non-hydrogen atoms in ligand:  12
+
+Number of vibrational degrees of freedom of ligand:  36
+
+
+Number of torsional degrees of freedom = 4
+Estimated loss of torsional free energy upon binding = +1.1932 kcal/mol
+
+
+DPF> about 0.665 -0.123 0.000            # small molecule center
+
+Small molecule center of rotation =	(+0.665, -0.123, +0.000)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(4.310, 50.079, 15.886) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( -0.415, -0.193, -0.398, 0.795 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 4                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 4
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +1.1932 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 2500000                 # maximum number of energy evaluations
+
+There will be at most 2500000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> sw_max_its 300                       # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 300 iterations.
+DPF> sw_max_succ 4                        # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                        # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                           # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.01                       # lower bound on rho
+
+rho will never get smaller than 0.010000.
+DPF> ls_search_freq 0.06                  # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> set_psw1                             # set the above pseudo-Solis & Wets parameters
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> ga_run 10                            # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 0.665 -0.123 0.000
+Furthest true ligand atom from "about" center is 5.091 Angstroms (maxrad).
+Number of requested GA dockings = 10 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 10
+Run: 1 Seed: 1571839126 2012228387 [ Run 1 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 7.822
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -1.277 41.568 24.563 quatxyzw -0.464693 -0.068567 0.837167 0.280196 center 0.665 -0.123 0.000 ntor 4 -48.8536 -149.1047 125.7047 36.9000
+State:	 -1.277  41.568  24.563  -0.484 -0.071  0.872 147.456    -48.85 -149.10  125.70   36.90
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +9.22 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +8.03 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +8.00 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.02 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.21 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.21 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -1.276738 41.567865 24.563296
+DOCKED: USER    NEWDPF quaternion0 -0.464693 -0.068567 0.837167 0.280196
+DOCKED: USER    NEWDPF axisangle0 -0.484084 -0.071428 0.872101 147.456140
+DOCKED: USER    NEWDPF quat0 -0.484084 -0.071428 0.872101 147.456140
+DOCKED: USER    NEWDPF dihe0 -48.85 -149.10 125.70 36.90 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -0.260  42.889  26.798 +0.40 -0.10    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -0.011  41.642  26.291 +0.38 +0.08    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0       0.192  40.639  26.987 -0.03 -0.04    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -0.014  41.647  24.837 +0.49 +0.01    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -1.116  42.147  24.143 +1.34 +0.01    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -1.119  42.151  22.748 -0.15 +0.01    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -0.020  41.655  22.046 -0.43 +0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0       1.082  41.156  22.740 -0.15 +0.01    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0       1.085  41.151  24.135 +1.21 +0.01    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -0.024  41.659  20.637 +4.59 -0.12    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -0.525  42.379  20.133 +0.39 +0.04    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0       0.474  40.940  20.127 +0.27 +0.04    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0       0.451  43.258  27.984 +0.27 +0.06    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0       1.063  44.628  27.785 -0.58 +0.01    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 10
+Run: 2 Seed: 1539079592 1978849291 [ Run 2 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 3.567
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -3.416 37.727 16.458 quatxyzw -0.130683 0.024465 -0.912827 -0.386097 center 0.665 -0.123 0.000 ntor 4 -19.4751 -158.1560 131.6035 -34.5465
+State:	 -3.416  37.727  16.458  -0.142  0.027 -0.990 -134.576    -19.48 -158.16  131.60  -34.55
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +4.94 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +3.75 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +3.83 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.08 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.18 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.18 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -3.415821 37.727009 16.457638
+DOCKED: USER    NEWDPF quaternion0 -0.130683 0.024465 -0.912827 -0.386097
+DOCKED: USER    NEWDPF axisangle0 -0.141668 0.026522 -0.989559 -134.576225
+DOCKED: USER    NEWDPF quat0 -0.141668 0.026522 -0.989559 -134.576225
+DOCKED: USER    NEWDPF dihe0 -19.48 -158.16 131.60 -34.55 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -1.724  39.867  15.882 +0.15 +0.15    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -1.503  38.517  15.902 +0.60 -0.13    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0      -0.736  37.929  15.128 +1.24 +0.08    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -2.280  37.863  16.943 -0.53 -0.02    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -2.281  38.378  18.239 +1.11 -0.01    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -3.027  37.750  19.238 -0.39 -0.01    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -3.771  36.608  18.940 -0.25 -0.00    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -3.770  36.094  17.644 +0.55 -0.00    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0      -3.024  36.721  16.645 +0.54 -0.00    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -4.524  35.975  19.949 +1.84 +0.05    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -4.800  36.490  20.774 -0.02 -0.03    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -4.787  35.003  19.850 -0.31 -0.02    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0      -0.612  40.699  15.535 -0.16 -0.11    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -1.128  42.054  15.099 -0.55 -0.03    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 10
+Run: 3 Seed: 188782184 1461598523 [ Run 3 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 2.550
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.279 39.119 30.640 quatxyzw -0.501323 0.343022 -0.794147 0.018500 center 0.665 -0.123 0.000 ntor 4 -31.2660 -67.4816 89.9871 18.4497
+State:	 -2.279  39.119  30.640  -0.501  0.343 -0.794 177.880    -31.27  -67.48   89.99   18.45
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +3.93 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +2.73 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +2.63 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.11 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.18 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.18 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -2.279237 39.118583 30.639624
+DOCKED: USER    NEWDPF quaternion0 -0.501323 0.343022 -0.794147 0.018500
+DOCKED: USER    NEWDPF axisangle0 -0.501409 0.343081 -0.794282 177.879945
+DOCKED: USER    NEWDPF quat0 -0.501409 0.343081 -0.794282 177.879945
+DOCKED: USER    NEWDPF dihe0 -31.27 -67.48 89.99 18.45 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -0.811  40.171  28.516 -0.02 +0.11    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -1.627  39.075  28.599 -0.11 -0.05    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0      -1.615  38.140  27.788 -0.33 -0.01    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -2.506  39.150  29.755 +0.93 -0.01    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -2.097  38.617  30.978 +1.04 -0.01    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -2.941  38.688  32.086 +0.09 -0.02    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -4.193  39.292  31.973 -0.59 -0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -4.601  39.825  30.751 -0.16 -0.00    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0      -3.758  39.754  29.641 +1.61 -0.00    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -5.045  39.364  33.094 +0.00 +0.12    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -5.256  40.260  33.513 -0.18 -0.02    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -5.445  38.519  33.480 +0.09 -0.02    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0      -0.203  40.429  27.245 +0.21 +0.02    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -0.022  41.922  27.081 +0.04 +0.01    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 10
+Run: 4 Seed: 1697816143 1988961689 [ Run 4 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 2.578
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.413 39.174 30.633 quatxyzw -0.457766 0.356573 -0.812936 0.049403 center 0.665 -0.123 0.000 ntor 4 -47.4800 104.3599 -85.3579 14.7952
+State:	 -2.413  39.174  30.633  -0.458  0.357 -0.814 174.337    -47.48  104.36  -85.36   14.80
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +3.96 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +2.77 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +2.65 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.12 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.19 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.19 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -2.412941 39.173819 30.632746
+DOCKED: USER    NEWDPF quaternion0 -0.457766 0.356573 -0.812936 0.049403
+DOCKED: USER    NEWDPF axisangle0 -0.458326 0.357009 -0.813930 174.336500
+DOCKED: USER    NEWDPF quat0 -0.458326 0.357009 -0.813930 174.336500
+DOCKED: USER    NEWDPF dihe0 -47.48 104.36 -85.36 14.80 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -0.717  40.030  28.593 -0.06 +0.12    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -1.634  39.016  28.643 -0.16 -0.05    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0      -1.695  38.096  27.816 -0.10 -0.01    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -2.524  39.156  29.784 +1.04 -0.01    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -3.755  39.795  29.635 +1.57 -0.00    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -4.608  39.930  30.731 -0.17 -0.00    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -4.230  39.426  31.975 -0.60 -0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -3.000  38.787  32.124 -0.06 -0.02    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0      -2.146  38.653  31.029 +0.88 -0.01    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -5.093  39.563  33.082 +0.18 +0.12    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -5.184  40.457  33.546 -0.23 -0.02    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -5.620  38.766  33.415 +0.14 -0.01    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0      -0.005  40.198  27.362 +0.10 +0.01    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -0.025  41.661  26.977 +0.13 +0.01    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 10
+Run: 5 Seed: 73793666 1515764500 [ Run 5 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 8.354
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -1.028 41.818 23.772 quatxyzw -0.297651 -0.765264 0.178658 0.542085 center 0.665 -0.123 0.000 ntor 4 10.5247 -139.7457 -94.4838 -39.6346
+State:	 -1.028  41.818  23.772  -0.354 -0.911  0.213 114.349     10.52 -139.75  -94.48  -39.63
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +9.73 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +8.54 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +8.59 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.05 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.18 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.18 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -1.027819 41.818187 23.771670
+DOCKED: USER    NEWDPF quaternion0 -0.297651 -0.765264 0.178658 0.542085
+DOCKED: USER    NEWDPF axisangle0 -0.354210 -0.910678 0.212606 114.348639
+DOCKED: USER    NEWDPF quat0 -0.354210 -0.910678 0.212606 114.348639
+DOCKED: USER    NEWDPF dihe0 10.52 -139.75 -94.48 -39.63 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -0.526  40.913  26.360 +0.34 -0.08    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -0.005  41.960  25.649 +0.46 +0.09    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0       0.239  43.072  26.135 +0.35 -0.09    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0       0.222  41.601  24.259 +1.72 +0.01    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -0.816  41.708  23.333 +0.64 +0.01    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -0.598  41.362  21.998 +0.40 +0.01    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0       0.657  40.912  21.590 +0.33 +0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0       1.694  40.805  22.516 -0.28 +0.01    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0       1.477  41.149  23.850 +1.33 +0.01    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0       0.877  40.563  20.242 +2.74 -0.10    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0       0.476  41.124  19.502 +0.70 +0.03    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0       1.435  39.750  20.013 +0.41 +0.04    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0      -0.037  40.729  27.694 -0.03 -0.00    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -0.523  39.395  28.217 -0.52 -0.01    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 10
+Run: 6 Seed: 517864954 1707094301 [ Run 6 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 4.722
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.591 37.720 30.381 quatxyzw -0.328030 0.761721 -0.518908 0.207154 center 0.665 -0.123 0.000 ntor 4 -121.8672 -30.6231 -33.9597 41.6121
+State:	 -2.591  37.720  30.381  -0.335  0.779 -0.530 156.089   -121.87  -30.62  -33.96   41.61
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +6.15 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +4.96 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +5.02 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.06 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.24 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.24 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -2.590596 37.719820 30.381229
+DOCKED: USER    NEWDPF quaternion0 -0.328030 0.761721 -0.518908 0.207154
+DOCKED: USER    NEWDPF axisangle0 -0.335303 0.778610 -0.530414 156.088766
+DOCKED: USER    NEWDPF quat0 -0.335303 0.778610 -0.530414 156.088766
+DOCKED: USER    NEWDPF dihe0 -121.87 -30.62 -33.96 41.61 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -0.482  38.452  28.712 -0.53 +0.06    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -1.837  38.490  28.529 +0.35 -0.04    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0      -2.403  38.167  27.476 -0.26 -0.03    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -2.524  38.957  29.722 +1.79 -0.01    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -3.686  39.721  29.604 +1.67 -0.00    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -4.345  40.170  30.750 -0.03 -0.00    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -3.842  39.855  32.012 -0.52 -0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -2.681  39.092  32.130 +0.09 -0.02    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0      -2.022  38.643  30.985 +1.08 -0.01    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -4.508  40.309  33.169 +0.49 +0.20    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -4.474  39.763  34.020 -0.23 -0.14    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -5.022  41.180  33.149 -0.15 -0.07    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0       0.330  38.916  27.627 +1.46 +0.01    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -0.043  40.348  27.309 -0.20 +0.00    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 10
+Run: 7 Seed: 2016674849 1187142125 [ Run 7 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 1.975
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -0.199 42.151 14.169 quatxyzw -0.243504 -0.003443 0.829813 0.502100 center 0.665 -0.123 0.000 ntor 4 133.5829 178.5461 -175.9755 -28.6889
+State:	 -0.199  42.151  14.169  -0.282 -0.004  0.960 119.722    133.58  178.55 -175.98  -28.69
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +3.33 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +2.14 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +2.17 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.03 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.17 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.17 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -0.198849 42.150663 14.169278
+DOCKED: USER    NEWDPF quaternion0 -0.243504 -0.003443 0.829813 0.502100
+DOCKED: USER    NEWDPF axisangle0 -0.281569 -0.003981 0.959533 119.721992
+DOCKED: USER    NEWDPF quat0 -0.281569 -0.003981 0.959533 119.721992
+DOCKED: USER    NEWDPF dihe0 133.58 178.55 -175.98 -28.69 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0       0.653  44.577  15.247 -0.16 +0.13    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0       1.262  43.353  15.176 +0.68 -0.12    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0       2.488  43.191  15.127 +0.51 +0.14    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0       0.289  42.272  15.163 -0.76 -0.03    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -1.076  42.563  15.137 -0.33 -0.02    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -2.009  41.526  15.126 +1.00 -0.03    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -1.579  40.199  15.140 -0.08 -0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -0.215  39.909  15.167 -0.16 -0.02    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0       0.719  40.945  15.179 -0.68 -0.02    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -2.522  39.152  15.129 +1.25 +0.14    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -3.512  39.362  15.133 +0.02 -0.11    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -2.211  38.189  15.119 +0.17 -0.01    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0       1.390  45.630  15.878 +1.28 -0.05    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0       1.978  45.112  17.173 -0.57 -0.02    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 10
+Run: 8 Seed: 2115771019 818339413 [ Run 8 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 6.472
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans 0.850 39.679 25.709 quatxyzw 0.400772 -0.365784 -0.474469 0.693154 center 0.665 -0.123 0.000 ntor 4 168.4882 -143.6250 139.9375 -67.2007
+State:	  0.850  39.679  25.709   0.556 -0.507 -0.658 92.239    168.49 -143.63  139.94  -67.20
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +7.83 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +6.64 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +6.70 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.06 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.17 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.17 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 0.850378 39.678579 25.708597
+DOCKED: USER    NEWDPF quaternion0 0.400772 -0.365784 -0.474469 0.693154
+DOCKED: USER    NEWDPF axisangle0 0.556018 -0.507477 -0.658264 92.239380
+DOCKED: USER    NEWDPF quat0 0.556018 -0.507477 -0.658264 92.239380
+DOCKED: USER    NEWDPF dihe0 168.49 -143.63 139.94 -67.20 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0       0.289  38.613  28.223 -0.42 +0.03    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -0.524  39.162  27.269 -0.29 +0.03    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0      -1.371  38.523  26.630 +0.05 -0.07    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -0.268  40.584  27.102 +0.49 +0.00    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -0.021  41.384  28.218 +1.02 -0.00    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0       0.224  42.748  28.057 +0.94 +0.01    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0       0.224  43.311  26.781 +0.40 +0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -0.022  42.511  25.666 +2.30 +0.01    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0      -0.269  41.147  25.826 +1.46 +0.01    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0       0.472  44.690  26.619 +0.25 -0.16    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0       1.141  45.157  27.216 +0.13 +0.06    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -0.020  45.212  25.906 +0.10 +0.07    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0      -0.341  38.153  29.423 +0.69 -0.04    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -1.769  38.654  29.454 -0.43 -0.01    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 10
+Run: 9 Seed: 201227173 651584664 [ Run 9 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 4.663
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -2.895 37.740 28.658 quatxyzw 0.074078 -0.444227 -0.797596 -0.401268 center 0.665 -0.123 0.000 ntor 4 -24.7464 68.4003 -155.9454 -62.3656
+State:	 -2.895  37.740  28.658   0.081 -0.485 -0.871 -132.685    -24.75   68.40 -155.95  -62.37
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +6.05 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +4.86 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +4.86 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.01 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.20 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.20 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -2.895056 37.739898 28.657766
+DOCKED: USER    NEWDPF quaternion0 0.074078 -0.444227 -0.797596 -0.401268
+DOCKED: USER    NEWDPF axisangle0 0.080874 -0.484984 -0.870775 -132.685065
+DOCKED: USER    NEWDPF quat0 0.080874 -0.484984 -0.870775 -132.685065
+DOCKED: USER    NEWDPF dihe0 -24.75 68.40 -155.95 -62.37 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -1.177  39.768  27.817 +0.34 +0.01    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -1.091  38.880  28.855 -0.36 -0.07    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0      -0.199  38.029  28.966 -0.42 +0.04    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -2.178  39.062  29.804 +1.05 -0.01    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -3.372  39.653  29.392 +2.16 -0.00    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -4.414  39.829  30.304 +0.41 -0.00    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -4.262  39.413  31.626 -0.56 -0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -3.067  38.823  32.038 -0.13 -0.02    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0      -2.025  38.648  31.127 +1.39 -0.01    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -5.314  39.591  32.547 +0.84 +0.09    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -5.217  40.253  33.305 -0.15 -0.04    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -6.167  39.055  32.450 +0.19 +0.00    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0      -0.095  40.693  27.666 -0.02 -0.00    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -0.027  41.142  26.223 +0.11 +0.01    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 10
+Run: 10 Seed: 1940913843 1938620525 [ Run 10 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: 5.474
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -3.237 38.589 29.611 quatxyzw 0.234474 0.394414 0.829248 0.319073 center 0.665 -0.123 0.000 ntor 4 72.6583 -132.8527 17.4186 -27.5462
+State:	 -3.237  38.589  29.611   0.247  0.416  0.875 142.786     72.66 -132.85   17.42  -27.55
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   +6.88 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   +5.69 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   +5.68 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.01 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -0.21 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -0.21 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_anestezin.pdbqt
+DOCKED: USER    NEWDPF about 0.665000 -0.123000 0.000000
+DOCKED: USER    NEWDPF tran0 -3.236566 38.588797 29.611130
+DOCKED: USER    NEWDPF quaternion0 0.234474 0.394414 0.829248 0.319073
+DOCKED: USER    NEWDPF axisangle0 0.247406 0.416167 0.874983 142.786195
+DOCKED: USER    NEWDPF quat0 0.247406 0.416167 0.874983 142.786195
+DOCKED: USER    NEWDPF dihe0 72.66 -132.85 17.42 -27.55 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  4 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_1  and  C_11 
+DOCKED: REMARK    3  A    between atoms: N_3  and  C_7 
+DOCKED: REMARK    4  A    between atoms: C_4  and  C_10 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0      -1.497  39.659  27.714 +1.25 -0.01    -0.318 OA
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   2
+DOCKED: ATOM      2  C   UNK     0      -1.273  38.845  28.791 -0.37 -0.06    +0.293 C 
+DOCKED: ATOM      3  O   UNK     0      -0.337  38.039  28.868 -0.37 +0.04    -0.259 OA
+DOCKED: BRANCH   2   4
+DOCKED: ATOM      4  C   UNK     0      -2.272  39.047  29.829 +1.15 -0.01    +0.039 A 
+DOCKED: ATOM      5  C   UNK     0      -2.029  38.598  31.127 +1.68 -0.01    +0.020 A 
+DOCKED: ATOM      6  C   UNK     0      -2.988  38.790  32.123 -0.04 -0.02    +0.030 A 
+DOCKED: ATOM      7  C   UNK     0      -4.189  39.432  31.820 -0.59 -0.01    +0.025 A 
+DOCKED: ATOM      8  C   UNK     0      -4.431  39.881  30.522 +0.04 -0.00    +0.030 A 
+DOCKED: ATOM      9  C   UNK     0      -3.473  39.688  29.526 +1.83 -0.00    +0.020 A 
+DOCKED: BRANCH   7  10
+DOCKED: ATOM     10  N   UNK     0      -5.157  39.626  32.826 +0.43 +0.11    -0.399 N 
+DOCKED: ATOM     11  H   UNK     0      -4.884  39.992  33.728 -0.17 -0.05    +0.156 HD
+DOCKED: ATOM     12  H   UNK     0      -6.126  39.398  32.647 +0.27 +0.01    +0.156 HD
+DOCKED: ENDBRANCH   7  10
+DOCKED: ENDBRANCH   2   4
+DOCKED: ENDBRANCH   1   2
+DOCKED: BRANCH   1  13
+DOCKED: ATOM     13  C   UNK     0      -0.354  40.025  26.932 +0.55 +0.03    +0.174 C 
+DOCKED: ATOM     14  C   UNK     0      -0.022  41.478  27.195 +0.03 +0.01    +0.034 C 
+DOCKED: ENDBRANCH   1  13
+DOCKED: TORSDOF 4
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 10
+
+RMSD cluster analysis will be performed using the ligand atoms only (14 / 14 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 5,  out of 10 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |     +3.33 |   7 |     +3.33 |   1 |#
+   2 |     +3.93 |   3 |     +5.39 |   5 |#####
+   3 |     +4.94 |   2 |     +4.94 |   1 |#
+   4 |     +7.83 |   8 |     +7.83 |   1 |#
+   5 |     +9.22 |   1 |     +9.48 |   2 |##
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 2, out of 10 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1      7       +3.33      0.00     43.93           RANKING
+   2      1      3       +3.93      0.00     49.43           RANKING
+   2      2      4       +3.96      0.18     49.46           RANKING
+   2      3      9       +6.05      0.82     49.30           RANKING
+   2      4      6       +6.15      0.86     49.37           RANKING
+   2      5     10       +6.88      0.74     49.35           RANKING
+   3      1      2       +4.94      0.00     41.27           RANKING
+   4      1      8       +7.83      0.00     48.97           RANKING
+   5      1      1       +9.22      0.00     47.76           RANKING
+   5      2      5       +9.73      1.27     46.71           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.59  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =     9.90            at Temperature, T = 298.15 K
+Free energy,        A ~ -1358.04 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =     6.20 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     4.58 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL        7
+USER    Run = 7
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 43.930 A
+USER  
+USER    Estimated Free Energy of Binding    =   +3.33 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   +2.14 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   +2.17 kcal/mol
+USER        Electrostatic Energy            =   -0.03 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.17 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.17 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+USER    NEWDPF move	ligand_anestezin.pdbqt
+USER    NEWDPF about	0.665000 -0.123000 0.000000
+USER    NEWDPF tran0	-0.198849 42.150663 14.169278
+USER    NEWDPF axisangle0	-0.281569 -0.003981 0.959533 119.721992
+USER    NEWDPF quaternion0	-0.243504 -0.003443 0.829813 0.502100
+USER    NEWDPF dihe0	133.58 178.55 -175.98 -28.69 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0       0.653  44.577  15.247 -0.16 +0.13    -0.318    43.930
+ATOM      2  C   UNK     0       1.262  43.353  15.176 +0.68 -0.12    +0.293    43.930
+ATOM      3  O   UNK     0       2.488  43.191  15.127 +0.51 +0.14    -0.259    43.930
+ATOM      4  C   UNK     0       0.289  42.272  15.163 -0.76 -0.03    +0.039    43.930
+ATOM      5  C   UNK     0      -1.076  42.563  15.137 -0.33 -0.02    +0.020    43.930
+ATOM      6  C   UNK     0      -2.009  41.526  15.126 +1.00 -0.03    +0.030    43.930
+ATOM      7  C   UNK     0      -1.579  40.199  15.140 -0.08 -0.01    +0.025    43.930
+ATOM      8  C   UNK     0      -0.215  39.909  15.167 -0.16 -0.02    +0.030    43.930
+ATOM      9  C   UNK     0       0.719  40.945  15.179 -0.68 -0.02    +0.020    43.930
+ATOM     10  N   UNK     0      -2.522  39.152  15.129 +1.25 +0.14    -0.399    43.930
+ATOM     11  H   UNK     0      -3.512  39.362  15.133 +0.02 -0.11    +0.156    43.930
+ATOM     12  H   UNK     0      -2.211  38.189  15.119 +0.17 -0.01    +0.156    43.930
+ATOM     13  C   UNK     0       1.390  45.630  15.878 +1.28 -0.05    +0.174    43.930
+ATOM     14  C   UNK     0       1.978  45.112  17.173 -0.57 -0.02    +0.034    43.930
+TER
+ENDMDL
+MODEL        3
+USER    Run = 3
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 5
+USER  
+USER    RMSD from reference structure       = 49.426 A
+USER  
+USER    Estimated Free Energy of Binding    =   +3.93 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   +2.73 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   +2.63 kcal/mol
+USER        Electrostatic Energy            =   +0.11 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.18 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.18 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+USER    NEWDPF move	ligand_anestezin.pdbqt
+USER    NEWDPF about	0.665000 -0.123000 0.000000
+USER    NEWDPF tran0	-2.279237 39.118583 30.639624
+USER    NEWDPF axisangle0	-0.501409 0.343081 -0.794282 177.879945
+USER    NEWDPF quaternion0	-0.501323 0.343022 -0.794147 0.018500
+USER    NEWDPF dihe0	-31.27 -67.48 89.99 18.45 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0      -0.811  40.171  28.516 -0.02 +0.11    -0.318    49.426
+ATOM      2  C   UNK     0      -1.627  39.075  28.599 -0.11 -0.05    +0.293    49.426
+ATOM      3  O   UNK     0      -1.615  38.140  27.788 -0.33 -0.01    -0.259    49.426
+ATOM      4  C   UNK     0      -2.506  39.150  29.755 +0.93 -0.01    +0.039    49.426
+ATOM      5  C   UNK     0      -2.097  38.617  30.978 +1.04 -0.01    +0.020    49.426
+ATOM      6  C   UNK     0      -2.941  38.688  32.086 +0.09 -0.02    +0.030    49.426
+ATOM      7  C   UNK     0      -4.193  39.292  31.973 -0.59 -0.01    +0.025    49.426
+ATOM      8  C   UNK     0      -4.601  39.825  30.751 -0.16 -0.00    +0.030    49.426
+ATOM      9  C   UNK     0      -3.758  39.754  29.641 +1.61 -0.00    +0.020    49.426
+ATOM     10  N   UNK     0      -5.045  39.364  33.094 +0.00 +0.12    -0.399    49.426
+ATOM     11  H   UNK     0      -5.256  40.260  33.513 -0.18 -0.02    +0.156    49.426
+ATOM     12  H   UNK     0      -5.445  38.519  33.480 +0.09 -0.02    +0.156    49.426
+ATOM     13  C   UNK     0      -0.203  40.429  27.245 +0.21 +0.02    +0.174    49.426
+ATOM     14  C   UNK     0      -0.022  41.922  27.081 +0.04 +0.01    +0.034    49.426
+TER
+ENDMDL
+MODEL        2
+USER    Run = 2
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 41.265 A
+USER  
+USER    Estimated Free Energy of Binding    =   +4.94 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   +3.75 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   +3.83 kcal/mol
+USER        Electrostatic Energy            =   -0.08 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.18 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.18 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+USER    NEWDPF move	ligand_anestezin.pdbqt
+USER    NEWDPF about	0.665000 -0.123000 0.000000
+USER    NEWDPF tran0	-3.415821 37.727009 16.457638
+USER    NEWDPF axisangle0	-0.141668 0.026522 -0.989559 -134.576225
+USER    NEWDPF quaternion0	-0.130683 0.024465 -0.912827 -0.386097
+USER    NEWDPF dihe0	-19.48 -158.16 131.60 -34.55 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0      -1.724  39.867  15.882 +0.15 +0.15    -0.318    41.265
+ATOM      2  C   UNK     0      -1.503  38.517  15.902 +0.60 -0.13    +0.293    41.265
+ATOM      3  O   UNK     0      -0.736  37.929  15.128 +1.24 +0.08    -0.259    41.265
+ATOM      4  C   UNK     0      -2.280  37.863  16.943 -0.53 -0.02    +0.039    41.265
+ATOM      5  C   UNK     0      -2.281  38.378  18.239 +1.11 -0.01    +0.020    41.265
+ATOM      6  C   UNK     0      -3.027  37.750  19.238 -0.39 -0.01    +0.030    41.265
+ATOM      7  C   UNK     0      -3.771  36.608  18.940 -0.25 -0.00    +0.025    41.265
+ATOM      8  C   UNK     0      -3.770  36.094  17.644 +0.55 -0.00    +0.030    41.265
+ATOM      9  C   UNK     0      -3.024  36.721  16.645 +0.54 -0.00    +0.020    41.265
+ATOM     10  N   UNK     0      -4.524  35.975  19.949 +1.84 +0.05    -0.399    41.265
+ATOM     11  H   UNK     0      -4.800  36.490  20.774 -0.02 -0.03    +0.156    41.265
+ATOM     12  H   UNK     0      -4.787  35.003  19.850 -0.31 -0.02    +0.156    41.265
+ATOM     13  C   UNK     0      -0.612  40.699  15.535 -0.16 -0.11    +0.174    41.265
+ATOM     14  C   UNK     0      -1.128  42.054  15.099 -0.55 -0.03    +0.034    41.265
+TER
+ENDMDL
+MODEL        8
+USER    Run = 8
+USER    Cluster Rank = 4
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 48.972 A
+USER  
+USER    Estimated Free Energy of Binding    =   +7.83 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   +6.64 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   +6.70 kcal/mol
+USER        Electrostatic Energy            =   -0.06 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.17 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.17 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+USER    NEWDPF move	ligand_anestezin.pdbqt
+USER    NEWDPF about	0.665000 -0.123000 0.000000
+USER    NEWDPF tran0	0.850378 39.678579 25.708597
+USER    NEWDPF axisangle0	0.556018 -0.507477 -0.658264 92.239380
+USER    NEWDPF quaternion0	0.400772 -0.365784 -0.474469 0.693154
+USER    NEWDPF dihe0	168.49 -143.63 139.94 -67.20 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0       0.289  38.613  28.223 -0.42 +0.03    -0.318    48.972
+ATOM      2  C   UNK     0      -0.524  39.162  27.269 -0.29 +0.03    +0.293    48.972
+ATOM      3  O   UNK     0      -1.371  38.523  26.630 +0.05 -0.07    -0.259    48.972
+ATOM      4  C   UNK     0      -0.268  40.584  27.102 +0.49 +0.00    +0.039    48.972
+ATOM      5  C   UNK     0      -0.021  41.384  28.218 +1.02 -0.00    +0.020    48.972
+ATOM      6  C   UNK     0       0.224  42.748  28.057 +0.94 +0.01    +0.030    48.972
+ATOM      7  C   UNK     0       0.224  43.311  26.781 +0.40 +0.01    +0.025    48.972
+ATOM      8  C   UNK     0      -0.022  42.511  25.666 +2.30 +0.01    +0.030    48.972
+ATOM      9  C   UNK     0      -0.269  41.147  25.826 +1.46 +0.01    +0.020    48.972
+ATOM     10  N   UNK     0       0.472  44.690  26.619 +0.25 -0.16    -0.399    48.972
+ATOM     11  H   UNK     0       1.141  45.157  27.216 +0.13 +0.06    +0.156    48.972
+ATOM     12  H   UNK     0      -0.020  45.212  25.906 +0.10 +0.07    +0.156    48.972
+ATOM     13  C   UNK     0      -0.341  38.153  29.423 +0.69 -0.04    +0.174    48.972
+ATOM     14  C   UNK     0      -1.769  38.654  29.454 -0.43 -0.01    +0.034    48.972
+TER
+ENDMDL
+MODEL        1
+USER    Run = 1
+USER    Cluster Rank = 5
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 47.758 A
+USER  
+USER    Estimated Free Energy of Binding    =   +9.22 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    
+USER    (1) Final Intermolecular Energy     =   +8.03 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   +8.00 kcal/mol
+USER        Electrostatic Energy            =   +0.02 kcal/mol
+USER    (2) Final Total Internal Energy     =   -0.21 kcal/mol
+USER    (3) Torsional Free Energy           =   +1.19 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -0.21 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dpf
+USER    NEWDPF move	ligand_anestezin.pdbqt
+USER    NEWDPF about	0.665000 -0.123000 0.000000
+USER    NEWDPF tran0	-1.276738 41.567865 24.563296
+USER    NEWDPF axisangle0	-0.484084 -0.071428 0.872101 147.456140
+USER    NEWDPF quaternion0	-0.464693 -0.068567 0.837167 0.280196
+USER    NEWDPF dihe0	-48.85 -149.10 125.70 36.90 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0      -0.260  42.889  26.798 +0.40 -0.10    -0.318    47.758
+ATOM      2  C   UNK     0      -0.011  41.642  26.291 +0.38 +0.08    +0.293    47.758
+ATOM      3  O   UNK     0       0.192  40.639  26.987 -0.03 -0.04    -0.259    47.758
+ATOM      4  C   UNK     0      -0.014  41.647  24.837 +0.49 +0.01    +0.039    47.758
+ATOM      5  C   UNK     0      -1.116  42.147  24.143 +1.34 +0.01    +0.020    47.758
+ATOM      6  C   UNK     0      -1.119  42.151  22.748 -0.15 +0.01    +0.030    47.758
+ATOM      7  C   UNK     0      -0.020  41.655  22.046 -0.43 +0.01    +0.025    47.758
+ATOM      8  C   UNK     0       1.082  41.156  22.740 -0.15 +0.01    +0.030    47.758
+ATOM      9  C   UNK     0       1.085  41.151  24.135 +1.21 +0.01    +0.020    47.758
+ATOM     10  N   UNK     0      -0.024  41.659  20.637 +4.59 -0.12    -0.399    47.758
+ATOM     11  H   UNK     0      -0.525  42.379  20.133 +0.39 +0.04    +0.156    47.758
+ATOM     12  H   UNK     0       0.474  40.940  20.127 +0.27 +0.04    +0.156    47.758
+ATOM     13  C   UNK     0       0.451  43.258  27.984 +0.27 +0.06    +0.174    47.758
+ATOM     14  C   UNK     0       1.063  44.628  27.785 -0.58 +0.01    +0.034    47.758
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=14          # atoms
+AVSFLD: dim2=5           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/d.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			10:54 45" a.m., 12/16/2022
+
+
+________________________________________________________________________________
+
+D:/Documents/github/bioinformatics/docking/autodock/05-AST/anestezin/autodock4.exe: Successful Completion on "DEV"
+
+Real= 3m 41.15s,  CPU= 3m 10.44s,  System= 2.80s
+________________________________________________________________________________
+
