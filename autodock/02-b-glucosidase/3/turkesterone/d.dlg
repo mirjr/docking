@@ -1,0 +1,2113 @@
+          AutoDock 4.2 Release 4.2.6   
+         (C) 1989-2012 The Scripps Research Institute
+        AutoDock comes with ABSOLUTELY NO WARRANTY.
+        AutoDock is free software, and you are welcome
+        to redistribute it under certain conditions;
+        for details type 'autodock4 -C'
+
+                     main.cc  $Revision: 1.213 $
+
+                   Compiled on Feb 20 2022 at 09:48:33
+
+
+This file was created at:			5:12 29" p.m., 02/15/2023
+                   on host:		"dev"
+Current Working Directory = "/home/mirjr/Documents/github/bioinfo/docking/autodock/02-b-glucosidase/3/turkesterone"
+
+      ________________________________________________________________
+
+                   SETTING UP DEFAULT PARAMETER LIBRARY
+      ________________________________________________________________
+
+
+Random number generator was seeded with values 12454, 1676463149.
+Docking parameter file (DPF) used for this docking:		./d.dpf
+DPF> autodock_parameter_version 4.2       # used by autodock to validate parameter set
+
+	Autodock parameter version 4.2.
+DPF> outlev 1                             # diagnostic output level
+
+Output Level = 1  ADT-COMPATIBLE OUTPUT DURING DOCKING.
+DPF> intelec                              # calculate internal electrostatics
+
+Electrostatic energies will be calculated for all non-bonds between moving atoms.
+DPF> seed pid time                        # seeds for random generator
+
+Random number generator was seeded with values 12454, 1676463149.
+DPF> ligand_types C HD OA                 # atoms types in ligand
+
+DPF> fld receptor.maps.fld                # grid_data_file
+
+Opening Grid Map Dimensions file:		receptor.maps.fld
+Grid Point Spacing =				0.500 Angstroms
+
+Even Number of User-specified Grid Points =	40 x-points
+						40 y-points
+						40 z-points
+
+Coordinates of Central Grid Point of Maps =	(-28.881, 7.770, -3.935)
+Macromolecule file used to create Grid Maps =	receptor.pdbqt
+Grid Parameter file used to create Grid Maps =	./g.gpf
+Minimum coordinates in grid = (-38.881, -2.230, -13.935)
+Maximum coordinates in grid = (-18.881, 17.770, 6.065)
+
+DPF> map receptor.C.map                   # atom-specific affinity map
+
+DPF> map receptor.HD.map                  # atom-specific affinity map
+
+DPF> map receptor.OA.map                  # atom-specific affinity map
+
+DPF> elecmap receptor.e.map               # electrostatics map
+
+DPF> desolvmap receptor.d.map             # desolvation map
+
+DPF> move ligand_turkesterone.pdbqt       # small molecule
+
+1,4-interactions will be _ignored_ in the non-bonded internal energy calculation.
+
+Ligand PDBQT file = "ligand_turkesterone.pdbqt"
+
+INPUT LIGAND PDBQT FILE:
+________________________
+
+INPUT-LIGAND-PDBQT: REMARK  12 active torsions:
+INPUT-LIGAND-PDBQT: REMARK  status: ('A' for Active; 'I' for Inactive)
+INPUT-LIGAND-PDBQT: REMARK    1  A    between atoms: O_1  and  C_10 
+INPUT-LIGAND-PDBQT: REMARK    2  A    between atoms: O_2  and  C_17 
+INPUT-LIGAND-PDBQT: REMARK    3  A    between atoms: O_3  and  C_20 
+INPUT-LIGAND-PDBQT: REMARK    4  A    between atoms: O_4  and  C_27 
+INPUT-LIGAND-PDBQT: REMARK    5  A    between atoms: O_6  and  C_29 
+INPUT-LIGAND-PDBQT: REMARK    6  A    between atoms: O_7  and  C_28 
+INPUT-LIGAND-PDBQT: REMARK    7  A    between atoms: O_8  and  C_33 
+INPUT-LIGAND-PDBQT: REMARK    8  A    between atoms: C_11  and  C_20 
+INPUT-LIGAND-PDBQT: REMARK    9  A    between atoms: C_20  and  C_28 
+INPUT-LIGAND-PDBQT: REMARK   10  A    between atoms: C_28  and  C_31 
+INPUT-LIGAND-PDBQT: REMARK   11  A    between atoms: C_31  and  C_32 
+INPUT-LIGAND-PDBQT: REMARK   12  A    between atoms: C_32  and  C_33 
+INPUT-LIGAND-PDBQT: ROOT
+INPUT-LIGAND-PDBQT: HETATM    1  O   UNK     0       0.063   1.047   0.981  0.00  0.00    -0.384 OA
+INPUT-LIGAND-PDBQT: HETATM    2  H   UNK     0       0.386   1.467   0.171  0.00  0.00     0.211 HD
+INPUT-LIGAND-PDBQT: ENDROOT
+INPUT-LIGAND-PDBQT: BRANCH   1   3
+INPUT-LIGAND-PDBQT: HETATM    3  C   UNK     0       0.281  -0.382   0.952  0.00  0.00     0.090 C 
+INPUT-LIGAND-PDBQT: HETATM    4  C   UNK     0      -0.505  -1.004  -0.231  0.00  0.00    -0.000 C 
+INPUT-LIGAND-PDBQT: HETATM    5  C   UNK     0      -1.964  -0.701   0.200  0.00  0.00     0.034 C 
+INPUT-LIGAND-PDBQT: HETATM    6  C   UNK     0      -0.077  -0.300  -1.526  0.00  0.00     0.045 C 
+INPUT-LIGAND-PDBQT: HETATM    7  C   UNK     0      -0.279  -2.535  -0.373  0.00  0.00     0.019 C 
+INPUT-LIGAND-PDBQT: HETATM    8  C   UNK     0      -1.956  -0.951   1.726  0.00  0.00     0.012 C 
+INPUT-LIGAND-PDBQT: HETATM    9  C   UNK     0      -0.476  -0.935   2.168  0.00  0.00     0.044 C 
+INPUT-LIGAND-PDBQT: HETATM   10  C   UNK     0       1.442  -0.427  -1.762  0.00  0.00     0.128 C 
+INPUT-LIGAND-PDBQT: HETATM   11  C   UNK     0       2.332   0.016  -0.542  0.00  0.00     0.055 C 
+INPUT-LIGAND-PDBQT: HETATM   12  C   UNK     0       3.889  -0.245  -0.752  0.00  0.00    -0.021 C 
+INPUT-LIGAND-PDBQT: HETATM   13  C   UNK     0       1.774  -0.568   0.773  0.00  0.00    -0.034 C 
+INPUT-LIGAND-PDBQT: HETATM   14  C   UNK     0       4.632  -0.203   0.615  0.00  0.00     0.071 C 
+INPUT-LIGAND-PDBQT: HETATM   15  C   UNK     0       4.523   0.811  -1.731  0.00  0.00     0.045 C 
+INPUT-LIGAND-PDBQT: HETATM   16  C   UNK     0       4.130  -1.650  -1.372  0.00  0.00     0.017 C 
+INPUT-LIGAND-PDBQT: HETATM   17  C   UNK     0       4.740   1.190   1.261  0.00  0.00     0.047 C 
+INPUT-LIGAND-PDBQT: HETATM   18  C   UNK     0       3.997  -1.152   1.610  0.00  0.00     0.154 C 
+INPUT-LIGAND-PDBQT: HETATM   19  C   UNK     0       4.793   2.333   0.253  0.00  0.00     0.147 C 
+INPUT-LIGAND-PDBQT: HETATM   20  C   UNK     0       5.390   1.891  -1.076  0.00  0.00     0.147 C 
+INPUT-LIGAND-PDBQT: HETATM   21  O   UNK     0       4.669  -1.846   2.370  0.00  0.00    -0.293 OA
+INPUT-LIGAND-PDBQT: HETATM   22  C   UNK     0       2.525  -1.153   1.717  0.00  0.00     0.057 C 
+INPUT-LIGAND-PDBQT: BRANCH   5  23
+INPUT-LIGAND-PDBQT: HETATM   23  C   UNK     0      -3.061  -1.473  -0.520  0.00  0.00     0.084 C 
+INPUT-LIGAND-PDBQT: HETATM   24  C   UNK     0      -3.006  -1.174  -2.027  0.00  0.00     0.049 C 
+INPUT-LIGAND-PDBQT: BRANCH  23  25
+INPUT-LIGAND-PDBQT: HETATM   25  O   UNK     0      -2.813  -2.875  -0.352  0.00  0.00    -0.387 OA
+INPUT-LIGAND-PDBQT: HETATM   26  H   UNK     0      -3.129  -3.148   0.525  0.00  0.00     0.210 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  23  25
+INPUT-LIGAND-PDBQT: BRANCH  23  27
+INPUT-LIGAND-PDBQT: HETATM   27  C   UNK     0      -4.471  -1.159   0.050  0.00  0.00     0.152 C 
+INPUT-LIGAND-PDBQT: BRANCH  27  28
+INPUT-LIGAND-PDBQT: HETATM   28  O   UNK     0      -5.446  -1.978  -0.604  0.00  0.00    -0.393 OA
+INPUT-LIGAND-PDBQT: HETATM   29  H   UNK     0      -5.165  -2.903  -0.501  0.00  0.00     0.210 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  27  28
+INPUT-LIGAND-PDBQT: BRANCH  27  30
+INPUT-LIGAND-PDBQT: HETATM   30  C   UNK     0      -4.899   0.314  -0.096  0.00  0.00     0.037 C 
+INPUT-LIGAND-PDBQT: BRANCH  30  31
+INPUT-LIGAND-PDBQT: HETATM   31  C   UNK     0      -6.321   0.558   0.441  0.00  0.00     0.040 C 
+INPUT-LIGAND-PDBQT: BRANCH  31  32
+INPUT-LIGAND-PDBQT: HETATM   32  C   UNK     0      -6.838   2.000   0.253  0.00  0.00     0.051 C 
+INPUT-LIGAND-PDBQT: HETATM   33  C   UNK     0      -8.281   2.098   0.759  0.00  0.00     0.045 C 
+INPUT-LIGAND-PDBQT: HETATM   34  C   UNK     0      -5.964   3.034   0.968  0.00  0.00     0.045 C 
+INPUT-LIGAND-PDBQT: BRANCH  32  35
+INPUT-LIGAND-PDBQT: HETATM   35  O   UNK     0      -6.841   2.299  -1.144  0.00  0.00    -0.391 OA
+INPUT-LIGAND-PDBQT: HETATM   36  H   UNK     0      -5.926   2.460  -1.429  0.00  0.00     0.210 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  32  35
+INPUT-LIGAND-PDBQT: ENDBRANCH  31  32
+INPUT-LIGAND-PDBQT: ENDBRANCH  30  31
+INPUT-LIGAND-PDBQT: ENDBRANCH  27  30
+INPUT-LIGAND-PDBQT: ENDBRANCH  23  27
+INPUT-LIGAND-PDBQT: ENDBRANCH   5  23
+INPUT-LIGAND-PDBQT: BRANCH  10  37
+INPUT-LIGAND-PDBQT: HETATM   37  O   UNK     0       1.754   0.347  -2.917  0.00  0.00    -0.395 OA
+INPUT-LIGAND-PDBQT: HETATM   38  H   UNK     0       2.508  -0.076  -3.362  0.00  0.00     0.210 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  10  37
+INPUT-LIGAND-PDBQT: BRANCH  19  39
+INPUT-LIGAND-PDBQT: HETATM   39  O   UNK     0       5.555   3.400   0.810  0.00  0.00    -0.393 OA
+INPUT-LIGAND-PDBQT: HETATM   40  H   UNK     0       6.446   3.067   1.009  0.00  0.00     0.210 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  19  39
+INPUT-LIGAND-PDBQT: BRANCH  20  41
+INPUT-LIGAND-PDBQT: HETATM   41  O   UNK     0       6.708   1.375  -0.882  0.00  0.00    -0.393 OA
+INPUT-LIGAND-PDBQT: HETATM   42  H   UNK     0       7.270   2.109  -0.582  0.00  0.00     0.210 HD
+INPUT-LIGAND-PDBQT: ENDBRANCH  20  41
+INPUT-LIGAND-PDBQT: ENDBRANCH   1   3
+INPUT-LIGAND-PDBQT: TORSDOF 12
+________________________________________________________________________________
+
+Total charge on ligand                               =	+0.002 e
+REMARK  12 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: O_1  and  C_10 
+REMARK    2  A    between atoms: O_2  and  C_17 
+REMARK    3  A    between atoms: O_3  and  C_20 
+REMARK    4  A    between atoms: O_4  and  C_27 
+REMARK    5  A    between atoms: O_6  and  C_29 
+REMARK    6  A    between atoms: O_7  and  C_28 
+REMARK    7  A    between atoms: O_8  and  C_33 
+REMARK    8  A    between atoms: C_11  and  C_20 
+REMARK    9  A    between atoms: C_20  and  C_28 
+REMARK   10  A    between atoms: C_28  and  C_31 
+REMARK   11  A    between atoms: C_31  and  C_32 
+REMARK   12  A    between atoms: C_32  and  C_33 
+
+
+Number of Rotatable Bonds in Small Molecule =	12 torsions
+Number of atoms in ligand:  42
+
+Number of non-hydrogen atoms in ligand:  35
+
+Number of vibrational degrees of freedom of ligand:  120
+
+
+Number of torsional degrees of freedom = 12
+Estimated loss of torsional free energy upon binding = +3.5796 kcal/mol
+
+
+DPF> about 0.057 0.071 -0.099            # small molecule center
+
+Small molecule center of rotation =	(+0.057, +0.071, -0.099)
+
+DPF> tran0 random                         # initial coordinates/A or random
+
+Initial translation =			(-29.894, 5.107, -8.434) Angstroms
+DPF> quaternion0 random                   # initial orientation
+
+Each run will begin with a new, random initial orientation.
+Initial quaternion,  (x,y,z,w) =	( -0.621, 0.657, 0.309, -0.294 ),
+DPF> dihe0 random                         # initial dihedrals (relative) or random
+
+DPF> torsdof 12                            # torsional degrees of freedom
+
+Number of torsional degrees of freedom = 12
+Free energy coefficient for torsional degrees of freedom = 0.2983, the factory default value.
+
+Estimated loss of torsional free energy upon binding = +3.5796 kcal/mol
+
+DPF> rmstol 2.0                           # cluster_tolerance/A
+
+Maximum RMS tolerance for conformational cluster analysis = 2.00 Angstroms
+DPF> extnrg 1000.0                        # external grid energy
+
+External grid energy (beyond grid map walls) = 1000.00
+
+DPF> e0max 0.0 10000                      # max initial energy; max number of retries
+
+Using user-specified maximum number of retries for simanneal initialization, 10000 retries.
+If the simanneal initial energy is greater than e0max, 0.000,
+then a new, random initial state will be created.
+
+DPF> ga_pop_size 150                      # number of individuals in population
+
+A population of 150 individuals will be used
+DPF> ga_num_evals 2500000                 # maximum number of energy evaluations
+
+There will be at most 2500000 function evaluations used.
+DPF> ga_num_generations 27000             # maximum number of generations
+
+The GA will run for at most 27000 generations.
+DPF> ga_elitism 1                         # number of top individuals to survive to next generation
+
+The 1 best will be preserved each GA generation.
+DPF> ga_mutation_rate 0.02                # rate of gene mutation
+
+The mutation rate is 0.020000.
+DPF> ga_crossover_rate 0.8                # rate of crossover
+
+The crossover rate is 0.800000.
+DPF> ga_window_size 10                    # 
+
+The GA's selection window is 10 generations.
+DPF> ga_cauchy_alpha 0.0                  # Alpha parameter of Cauchy distribution
+
+The alpha parameter (for the Cauchy distribution) is being set to 0.000000.
+DPF> ga_cauchy_beta 1.0                   # Beta parameter Cauchy distribution
+
+The beta parameter (for the Cauchy distribution) is being set to 1.000000.
+DPF> set_ga                               # set the above parameters for GA or LGA
+
+DPF> sw_max_its 300                       # iterations of Solis & Wets local search
+
+Solis & Wets algorithms will perform at most 300 iterations.
+DPF> sw_max_succ 4                        # consecutive successes before changing rho
+
+Solis & Wets algorithms expand rho every 4 in a row successes.
+DPF> sw_max_fail 4                        # consecutive failures before changing rho
+
+Solis & Wets algorithms contract rho every 4 in a row failures.
+DPF> sw_rho 1.0                           # size of local search space to sample
+
+rho is set to 1.000000.
+DPF> sw_lb_rho 0.01                       # lower bound on rho
+
+rho will never get smaller than 0.010000.
+DPF> ls_search_freq 0.06                  # probability of performing local search on individual
+
+Local search will be performed with frequency 0.060000.
+DPF> set_psw1                             # set the above pseudo-Solis & Wets parameters
+
+Creating a new Local Search object using the pseudo-Solis-Wets algorithm (pSW1) with the current settings.
+
+DPF> unbound_model bound                  # state of unbound ligand
+
+DPF> ga_run 10                            # do this many hybrid GA-LS runs
+
+centering ligand on specified point: 0.057 0.071 -0.099
+Furthest true ligand atom from "about" center is 8.624 Angstroms (maxrad).
+Number of requested GA dockings = 10 runs
+Unbound model to be used is 'same as bound' [AutoDock 4.2 default].
+
+	BEGINNING GENETIC ALGORITHM DOCKING 1 of 10
+Run: 1 Seed: 1796488399 691835390 [ Run 1 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.750
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -32.194 8.560 -0.248 quatxyzw -0.379261 -0.248761 -0.661151 0.597628 center 0.057 0.071 -0.099 ntor 12 -3.5233 -88.8418 121.3019 -8.3926 31.6137 49.3792 -20.5432 -101.3459 -23.7288 50.6064 -103.5107 108.8149
+State:	-32.194   8.560  -0.248  -0.473 -0.310 -0.825 106.600     -3.52  -88.84  121.30   -8.39   31.61   49.38  -20.54 -101.35  -23.73   50.61 -103.51  108.81
+
+DOCKED: MODEL        1
+DOCKED: USER    Run = 1
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.38 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   21.04 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.96 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.90 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.06 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.79 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.79 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -32.194397 8.560438 -0.247988
+DOCKED: USER    NEWDPF quaternion0 -0.379261 -0.248761 -0.661151 0.597628
+DOCKED: USER    NEWDPF axisangle0 -0.473027 -0.310263 -0.824610 106.599615
+DOCKED: USER    NEWDPF quat0 -0.473027 -0.310263 -0.824610 106.599615
+DOCKED: USER    NEWDPF dihe0 -3.52 -88.84 121.30 -8.39 31.61 49.38 -20.54 -101.35 -23.73 50.61 -103.51 108.81 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -31.919   8.274   1.152 -0.03 +0.08    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -32.818   8.623   1.070 +0.15 -0.04    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -31.082   8.722   0.062 -0.26 -0.02    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -31.266  10.248  -0.141 -0.27 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -32.758  10.306  -0.562 -0.37 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -30.963  10.958   1.186 -0.26 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -30.355  10.827  -1.259 -0.24 -0.01    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -32.927   9.078  -1.486 -0.46 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -31.725   8.148  -1.209 -0.38 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -29.535  10.648   1.678 -0.15 -0.03    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -29.186   9.115   1.750 -0.18 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -27.670   8.816   2.132 -0.21 +0.01    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -29.660   8.394   0.471 -0.24 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -27.298   7.352   1.759 -0.31 -0.02    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -27.404   9.054   3.665 -0.17 -0.01    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -26.712   9.757   1.348 -0.24 -0.01    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -27.950   6.265   2.632 -0.34 -0.02    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -27.615   7.063   0.306 -0.34 -0.05    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -28.226   6.711   4.064 -0.26 -0.06    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -27.255   7.791   4.520 -0.19 -0.06    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -26.860   6.406  -0.408 -0.40 +0.09    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -28.920   7.512  -0.216 -0.32 -0.02    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -33.234  11.601  -1.207 -0.43 -0.02    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -34.770  11.660  -1.186 -0.42 -0.01    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -32.752  12.701  -0.423 -0.07 +0.06    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -31.809  12.834  -0.612 +0.11 -0.04    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -32.698  11.768  -2.655 -0.35 -0.04    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -32.022  13.024  -2.774 -0.18 +0.10    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -32.481  13.657  -2.198 +0.15 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -33.786  11.697  -3.744 -0.57 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -33.378  12.460  -5.017 -0.45 -0.01    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -32.453  11.672  -5.968 -0.60 -0.01    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -32.581  12.231  -7.389 -0.39 -0.01    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -30.988  11.708  -5.524 -0.49 -0.01    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -32.885  10.310  -5.991 -0.33 +0.12    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -33.851  10.293  -6.088 -0.44 -0.12    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -29.391  11.255   2.959 -0.05 +0.07    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -28.441  11.388   3.119 +0.06 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -28.144   5.576   4.921 -0.13 +0.19    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -27.229   5.498   5.238 +0.12 -0.11    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -25.909   7.322   4.425 -0.08 +0.15    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -25.940   6.354   4.345 +0.11 -0.08    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 2 of 10
+Run: 2 Seed: 965011444 787773272 [ Run 2 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.389
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -30.523 9.214 -1.781 quatxyzw 0.022930 0.664360 -0.718690 -0.203924 center 0.057 0.071 -0.099 ntor 12 7.3073 -98.9129 15.2360 99.8057 -93.5428 51.6693 33.0192 -50.0727 68.8336 69.0398 149.4783 -47.8618
+State:	-30.523   9.214  -1.781   0.023  0.679 -0.734 -156.467      7.31  -98.91   15.24   99.81  -93.54   51.67   33.02  -50.07   68.83   69.04  149.48  -47.86
+
+DOCKED: MODEL        2
+DOCKED: USER    Run = 2
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.30 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   24.30 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.87 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.82 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.05 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.51 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.51 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -30.523200 9.213716 -1.780638
+DOCKED: USER    NEWDPF quaternion0 0.022930 0.664360 -0.718690 -0.203924
+DOCKED: USER    NEWDPF axisangle0 0.023422 0.678620 -0.734116 -156.466942
+DOCKED: USER    NEWDPF quat0 0.023422 0.678620 -0.734116 -156.466942
+DOCKED: USER    NEWDPF dihe0 7.31 -98.91 15.24 99.81 -93.54 51.67 33.02 -50.07 68.83 69.04 149.48 -47.86 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -29.956   8.137  -2.580 -0.09 +0.11    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -30.309   8.819  -3.169 +0.12 -0.06    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -30.625   8.157  -1.298 -0.27 -0.02    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -29.652   8.685  -0.212 -0.23 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -28.571   7.573  -0.227 -0.33 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -29.137  10.064  -0.647 -0.19 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -30.311   8.795   1.191 -0.25 -0.00    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -29.387   6.269  -0.387 -0.21 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -30.784   6.683  -0.899 -0.35 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -30.296  11.058  -0.861 -0.21 -0.03    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -31.433  10.539  -1.817 -0.26 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -32.683  11.520  -1.924 -0.42 +0.01    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -31.811   9.084  -1.466 -0.34 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -33.913  10.765  -2.506 -0.51 -0.02    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -32.358  12.771  -2.821 -0.44 -0.01    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -33.083  12.052  -0.519 -0.46 -0.00    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -33.812  10.395  -3.997 -0.44 -0.02    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -34.207   9.509  -1.713 -0.43 -0.05    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -32.973  11.370  -4.817 -0.45 -0.04    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -32.984  12.770  -4.219 -0.28 -0.04    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -35.355   9.166  -1.436 -0.30 +0.10    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -33.070   8.637  -1.358 -0.42 -0.01    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -27.620   7.533   0.961 -0.32 -0.03    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -28.205   6.642   2.069 -0.33 -0.02    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -26.389   6.933   0.535 -0.27 +0.14    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -25.810   7.624   0.174 +0.05 -0.08    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -27.303   8.951   1.508 -0.19 -0.05    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -25.965   9.315   1.152 -0.14 +0.15    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -25.400   8.542   1.319 -0.01 -0.10    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -27.452   9.088   3.036 -0.18 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -28.617  10.018   3.421 -0.15 -0.01    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -29.546   9.460   4.520 -0.28 -0.01    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -30.965  10.000   4.315 -0.35 -0.00    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -29.570   7.929   4.545 -0.37 -0.01    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -29.077   9.926   5.786 -0.15 +0.09    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -28.169   9.604   5.918 +0.07 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -29.728  12.263  -1.367 -0.15 +0.11    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -28.977  12.499  -0.796 +0.06 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -33.473  11.395  -6.150 -0.23 +0.11    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -33.788  10.503  -6.375 -0.40 -0.10    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -34.322  13.263  -4.130 -0.05 +0.09    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -34.885  12.685  -4.673 +0.34 -0.04    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 3 of 10
+Run: 3 Seed: 590649547 1888673032 [ Run 3 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.941
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -33.429 10.907 -0.643 quatxyzw -0.128844 0.780595 0.205485 -0.576061 center 0.057 0.071 -0.099 ntor 12 12.3421 -81.7728 41.6627 47.0599 39.5974 48.1330 -179.6295 -27.2167 48.8753 35.8296 127.8647 179.9672
+State:	-33.429  10.907  -0.643  -0.158  0.955  0.251 -109.652     12.34  -81.77   41.66   47.06   39.60   48.13 -179.63  -27.22   48.88   35.83  127.86  179.97
+
+DOCKED: MODEL        3
+DOCKED: USER    Run = 3
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.33 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  123.41 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -8.91 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.82 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.09 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -4.03 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -4.03 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -33.428780 10.907378 -0.642537
+DOCKED: USER    NEWDPF quaternion0 -0.128844 0.780595 0.205485 -0.576061
+DOCKED: USER    NEWDPF axisangle0 -0.157626 0.954965 0.251386 -109.652050
+DOCKED: USER    NEWDPF quat0 -0.157626 0.954965 0.251386 -109.652050
+DOCKED: USER    NEWDPF dihe0 12.34 -81.77 41.66 47.06 39.60 48.13 -179.63 -27.22 48.88 35.83 127.86 179.97 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -32.944  12.276  -0.752 -0.22 +0.07    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -33.911  12.278  -0.783 +0.16 -0.03    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -32.409  11.009  -1.199 -0.32 -0.02    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -31.534  11.229  -2.460 -0.34 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -32.600  11.737  -3.466 -0.44 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -30.448  12.262  -2.126 -0.27 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -30.868   9.923  -2.974 -0.28 -0.01    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -33.837  10.859  -3.165 -0.57 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -33.608  10.238  -1.769 -0.49 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -29.577  11.801  -0.940 -0.22 -0.04    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -30.388  11.381   0.342 -0.22 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -29.484  10.784   1.509 -0.19 +0.00    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -31.580  10.481  -0.045 -0.29 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -30.365  10.004   2.528 -0.20 -0.01    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -28.688  11.917   2.258 -0.15 -0.01    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -28.437   9.788   0.937 -0.17 -0.00    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -31.285  10.875   3.402 -0.31 -0.00    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -31.206   8.956   1.830 -0.23 -0.03    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -30.731  12.267   3.682 -0.19 +0.01    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -29.209  12.290   3.649 -0.14 -0.02    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -31.378   7.835   2.305 -0.01 +0.07    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -31.909   9.349   0.594 -0.29 -0.01    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -32.209  11.722  -4.937 -0.46 -0.02    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -32.067  10.271  -5.425 -0.43 -0.01    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -33.266  12.327  -5.693 -0.25 +0.09    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -33.078  13.274  -5.796 +0.19 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -30.904  12.521  -5.206 -0.27 -0.05    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -31.033  13.252  -6.430 -0.35 +0.12    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -31.668  12.773  -6.989 +0.19 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -29.636  11.650  -5.293 -0.43 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -28.479  12.230  -4.459 -0.29 -0.01    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -27.424  11.193  -4.018 -0.41 -0.02    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -27.848   9.797  -4.489 -0.34 -0.02    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -26.025  11.518  -4.547 -0.42 -0.02    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -27.376  11.179  -2.590 -0.12 +0.14    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -27.547  12.078  -2.265 +0.09 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -28.680  12.867  -0.638 -0.05 +0.11    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -27.812  12.639  -1.013 +0.07 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -31.207  12.704   4.951 -0.29 -0.17    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -30.510  12.547   5.609 +0.09 +0.05    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -28.677  11.373   4.606 -0.03 +0.07    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -29.386  11.162   5.237 +0.08 -0.02    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 4 of 10
+Run: 4 Seed: 391213152 796860934 [ Run 4 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.152
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -29.806 10.240 -1.601 quatxyzw 0.089021 -0.216682 -0.537448 0.810107 center 0.057 0.071 -0.099 ntor 12 60.8692 -32.0212 179.6215 51.5807 36.9959 40.6788 -179.0549 -67.6805 83.6331 -0.5803 9.2648 -52.7935
+State:	-29.806  10.240  -1.601   0.152 -0.370 -0.917 71.787     60.87  -32.02  179.62   51.58   37.00   40.68 -179.05  -67.68   83.63   -0.58    9.26  -52.79
+
+DOCKED: MODEL        4
+DOCKED: USER    Run = 4
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -4.85 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  278.07 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -8.43 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.42 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.01 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -3.72 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -3.72 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -29.806140 10.240461 -1.600668
+DOCKED: USER    NEWDPF quaternion0 0.089021 -0.216682 -0.537448 0.810107
+DOCKED: USER    NEWDPF axisangle0 0.151840 -0.369588 -0.916706 71.787176
+DOCKED: USER    NEWDPF quat0 0.151840 -0.369588 -0.916706 71.787176
+DOCKED: USER    NEWDPF dihe0 60.87 -32.02 179.62 51.58 37.00 40.68 -179.05 -67.68 83.63 -0.58 9.26 -52.79 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -30.416  11.049  -0.555 -0.10 +0.10    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -30.899  11.183  -1.383 +0.09 -0.05    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -29.052  10.639  -0.805 -0.19 -0.03    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -28.840   9.195  -0.283 -0.21 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -29.059   9.402   1.238 -0.17 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -29.879   8.278  -0.945 -0.25 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -27.412   8.650  -0.566 -0.30 -0.01    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -28.368  10.754   1.528 -0.16 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -28.194  11.462   0.166 -0.20 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -29.768   8.318  -2.483 -0.23 -0.04    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -29.794   9.764  -3.103 -0.24 -0.02    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -29.546   9.795  -4.676 -0.35 +0.01    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -28.869  10.709  -2.308 -0.25 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -29.152  11.230  -5.132 -0.32 -0.02    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -30.819   9.319  -5.469 -0.26 -0.01    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -28.380   8.844  -5.065 -0.31 -0.01    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -30.286  12.270  -5.079 -0.37 -0.01    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -27.977  11.752  -4.332 -0.38 -0.05    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -31.673  11.679  -5.307 -0.41 -0.04    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -31.622  10.423  -6.165 -0.45 -0.04    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -27.063  12.387  -4.854 -0.36 +0.10    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -28.002  11.564  -2.869 -0.31 -0.02    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -28.578   8.284   2.154 -0.20 -0.03    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -29.129   6.935   1.663 -0.35 -0.01    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -27.148   8.218   2.075 -0.10 +0.13    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -26.792   8.036   2.960 +0.07 -0.08    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -28.971   8.529   3.636 -0.18 -0.04    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -28.428   7.488   4.454 -0.10 +0.15    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -27.672   7.107   3.977 +0.10 -0.08    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -30.490   8.600   3.885 -0.36 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -30.997  10.052   3.956 -0.33 -0.00    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -31.975  10.444   2.829 -0.35 -0.00    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -32.158   9.261   1.873 -0.25 -0.01    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -33.336  10.896   3.366 -0.51 +0.01    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -31.401  11.523   2.089 -0.14 +0.03    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -31.062  11.175   1.247 +0.08 -0.03    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -30.836   7.531  -3.002 -0.11 +0.09    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -30.484   6.646  -3.200 +0.14 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -32.497  12.667  -5.920 -0.25 +0.10    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -32.486  12.519  -6.881 +0.19 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -31.020  10.709  -7.429 -0.23 +0.12    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -31.148  11.655  -7.609 +0.18 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 5 of 10
+Run: 5 Seed: 1259076593 422416674 [ Run 5 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -14.135
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -31.896 11.058 2.304 quatxyzw 0.197547 0.909502 -0.014828 -0.365462 center 0.057 0.071 -0.099 ntor 12 14.9088 -70.0717 40.6437 -148.8494 47.4278 43.0019 -2.7866 90.0082 -39.9274 104.5527 150.6678 177.6084
+State:	-31.896  11.058   2.304   0.212  0.977 -0.016 -137.128     14.91  -70.07   40.64 -148.85   47.43   43.00   -2.79   90.01  -39.93  104.55  150.67  177.61
+
+DOCKED: MODEL        5
+DOCKED: USER    Run = 5
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.79 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   56.74 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.37 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.41 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.03 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -4.76 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -4.76 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -31.895522 11.058109 2.303589
+DOCKED: USER    NEWDPF quaternion0 0.197547 0.909502 -0.014828 -0.365462
+DOCKED: USER    NEWDPF axisangle0 0.212227 0.977090 -0.015930 -137.127975
+DOCKED: USER    NEWDPF quat0 0.212227 0.977090 -0.015930 -137.127975
+DOCKED: USER    NEWDPF dihe0 14.91 -70.07 40.64 -148.85 47.43 43.00 -2.79 90.01 -39.93 104.55 150.67 177.61 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -30.827  11.775   1.623 -0.13 +0.05    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -31.416  12.413   2.049 +0.09 -0.01    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -31.517  10.539   1.330 -0.27 -0.01    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -31.572  10.324  -0.204 -0.29 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -32.445  11.532  -0.634 -0.39 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -30.140  10.362  -0.754 -0.20 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -32.248   8.984  -0.607 -0.38 -0.00    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -33.523  11.618   0.471 -0.53 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -32.991  10.804   1.671 -0.42 -0.00    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -29.252   9.289  -0.091 -0.15 -0.04    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -29.268   9.309   1.482 -0.17 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -28.453   8.114   2.150 -0.23 +0.01    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -30.713   9.446   2.006 -0.25 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -28.870   7.943   3.640 -0.25 -0.02    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -26.901   8.354   2.059 -0.26 -0.02    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -28.755   6.773   1.424 -0.38 -0.01    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -28.404   9.066   4.584 -0.22 -0.01    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -30.371   7.789   3.772 -0.33 -0.04    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -27.096   9.724   4.159 -0.12 -0.05    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -26.214   8.772   3.363 -0.15 -0.05    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -30.878   6.985   4.551 -0.25 +0.09    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -31.228   8.712   3.002 -0.33 -0.01    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -33.038  11.479  -2.035 -0.41 -0.02    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -34.422  10.811  -1.991 -0.54 -0.01    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -33.226  12.823  -2.498 -0.24 +0.09    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -32.454  13.085  -3.027 +0.13 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -32.107  10.747  -3.040 -0.28 -0.04    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -30.967  11.565  -3.322 -0.10 +0.11    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -31.171  12.464  -3.011 +0.12 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -32.782  10.379  -4.375 -0.38 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -31.861  10.644  -5.580 -0.51 -0.01    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -31.931  12.083  -6.135 -0.59 -0.01    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -30.875  12.262  -7.231 -0.61 -0.02    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -33.316  12.432  -6.684 -0.43 -0.01    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -31.622  12.990  -5.075 -0.16 +0.11    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -31.974  12.629  -4.245 +0.15 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -27.927   9.477  -0.582 -0.07 +0.12    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -27.632  10.361  -0.304 +0.08 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -26.412  10.178   5.323 -0.03 +0.13    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -25.658   9.587   5.485 +0.06 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -25.923   7.603   4.131 -0.07 +0.15    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -26.035   7.832   5.069 +0.08 -0.08    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 6 of 10
+Run: 6 Seed: 1722454375 205101783 [ Run 6 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.666
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -31.668 8.383 -1.403 quatxyzw 0.177502 0.037589 0.850877 -0.493039 center 0.057 0.071 -0.099 ntor 12 75.4244 171.5564 120.0594 3.2904 35.0909 53.0823 -6.3274 41.7803 -113.6223 -168.9205 10.4369 119.9144
+State:	-31.668   8.383  -1.403   0.204  0.043  0.978 -120.919     75.42  171.56  120.06    3.29   35.09   53.08   -6.33   41.78 -113.62 -168.92   10.44  119.91
+
+DOCKED: MODEL        6
+DOCKED: USER    Run = 6
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.52 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   16.62 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.10 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.12 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.02 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.57 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.57 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -31.667837 8.383442 -1.403159
+DOCKED: USER    NEWDPF quaternion0 0.177502 0.037589 0.850877 -0.493039
+DOCKED: USER    NEWDPF axisangle0 0.204024 0.043205 0.978012 -120.918919
+DOCKED: USER    NEWDPF quat0 0.204024 0.043205 0.978012 -120.918919
+DOCKED: USER    NEWDPF dihe0 75.42 171.56 120.06 3.29 35.09 53.08 -6.33 41.78 -113.62 -168.92 10.44 119.91 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -32.110   7.770  -0.159 -0.08 +0.09    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -32.877   7.921  -0.730 +0.12 -0.05    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -31.038   8.689  -0.470 -0.26 -0.02    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -31.540  10.147  -0.308 -0.29 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -32.624  10.205  -1.416 -0.37 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -32.091  10.319   1.115 -0.32 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -30.431  11.204  -0.566 -0.26 -0.00    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -31.994   9.417  -2.588 -0.31 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -30.839   8.585  -1.989 -0.29 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -31.021   9.995   2.177 -0.22 -0.02    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -30.319   8.599   1.994 -0.26 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -29.128   8.337   3.018 -0.24 +0.01    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -29.931   8.380   0.516 -0.25 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -28.223   7.178   2.507 -0.29 -0.02    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -29.668   7.993   4.455 -0.37 -0.01    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -28.234   9.602   3.153 -0.15 -0.00    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -28.857   5.776   2.564 -0.40 -0.02    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -27.748   7.439   1.093 -0.28 -0.05    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -29.868   5.604   3.693 -0.33 -0.06    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -29.567   6.522   4.870 -0.33 -0.06    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -26.598   7.192   0.735 -0.28 +0.10    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -28.741   7.914   0.110 -0.27 -0.02    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -33.105  11.590  -1.826 -0.42 -0.02    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -33.475  12.405  -0.576 -0.42 -0.01    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -32.024  12.271  -2.477 -0.17 +0.10    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -32.389  12.952  -3.065 +0.14 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -34.302  11.528  -2.813 -0.45 -0.04    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -34.858  10.209  -2.810 -0.26 +0.15    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -34.987   9.945  -3.737 +0.11 -0.10    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -33.945  11.899  -4.266 -0.51 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -32.956  10.898  -4.891 -0.54 -0.01    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -31.794  11.549  -5.671 -0.53 -0.01    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -30.764  10.478  -6.045 -0.48 -0.01    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -32.269  12.277  -6.931 -0.64 -0.01    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -31.152  12.496  -4.816 -0.14 +0.11    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -31.035  12.094  -3.939 +0.13 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -31.656  10.073   3.450 -0.12 +0.01    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -31.005  10.416   4.086 +0.11 -0.00    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -29.862   4.242   4.110 -0.29 +0.20    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -29.252   4.156   4.862 +0.13 -0.12    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -28.254   6.270   5.374 -0.16 +0.19    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -27.942   5.439   4.978 +0.12 -0.10    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 7 of 10
+Run: 7 Seed: 1526629590 686801490 [ Run 7 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -12.585
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -31.119 7.263 -0.763 quatxyzw 0.695066 -0.603498 -0.209061 0.330100 center 0.057 0.071 -0.099 ntor 12 22.5055 -76.5930 -164.8866 167.7562 40.5191 31.4622 165.5776 -46.4852 109.5993 31.5815 41.7265 -150.0920
+State:	-31.119   7.263  -0.763   0.736 -0.639 -0.221 141.450     22.51  -76.59 -164.89  167.76   40.52   31.46  165.58  -46.49  109.60   31.58   41.73 -150.09
+
+DOCKED: MODEL        7
+DOCKED: USER    Run = 7
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.54 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   87.64 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.11 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.18 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.07 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -3.47 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -3.47 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -31.118555 7.262599 -0.763263
+DOCKED: USER    NEWDPF quaternion0 0.695066 -0.603498 -0.209061 0.330100
+DOCKED: USER    NEWDPF axisangle0 0.736341 -0.639336 -0.221476 141.450255
+DOCKED: USER    NEWDPF quat0 0.736341 -0.639336 -0.221476 141.450255
+DOCKED: USER    NEWDPF dihe0 22.51 -76.59 -164.89 167.76 40.52 31.46 165.58 -46.49 109.60 31.58 41.73 -150.09 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -31.955   7.974  -1.719 -0.19 +0.09    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -32.393   7.149  -1.466 +0.12 -0.05    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -30.521   7.877  -1.554 -0.29 -0.02    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -29.815   8.753  -2.621 -0.27 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -30.247   8.029  -3.922 -0.22 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -30.342  10.190  -2.501 -0.23 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -28.267   8.755  -2.478 -0.26 -0.01    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -30.171   6.530  -3.551 -0.50 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -30.153   6.458  -2.008 -0.50 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -30.104  10.763  -1.088 -0.19 -0.03    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -30.631   9.853   0.083 -0.21 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -30.261  10.394   1.535 -0.22 +0.00    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -30.232   8.382  -0.155 -0.26 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -30.415   9.258   2.588 -0.23 -0.01    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -31.161  11.618   1.941 -0.24 -0.00    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -28.783  10.875   1.579 -0.17 -0.00    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -31.864   8.834   2.888 -0.36 -0.01    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -29.622   8.032   2.188 -0.22 -0.04    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -32.881   9.959   2.726 -0.30 +0.00    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -32.258  11.326   2.970 -0.35 +0.02    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -28.982   7.373   3.005 -0.15 +0.09    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -29.717   7.579   0.786 -0.31 -0.02    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -29.461   8.366  -5.182 -0.36 -0.03    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -28.702   9.689  -4.985 -0.34 -0.02    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -28.484   7.339  -5.395 -0.01 +0.15    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -28.796   6.749  -6.101 +0.17 -0.08    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -30.370   8.438  -6.439 -0.28 -0.05    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -29.656   7.941  -7.576 -0.25 +0.19    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -28.708   8.007  -7.375 +0.16 -0.09    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -30.883   9.853  -6.769 -0.51 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -31.956  10.326  -5.772 -0.50 -0.01    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -31.794  11.787  -5.302 -0.49 -0.01    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -30.373  12.271  -5.609 -0.51 -0.01    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -32.816  12.727  -5.948 -0.54 -0.01    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -31.976  11.827  -3.885 -0.13 +0.11    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -31.161  12.166  -3.478 +0.13 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -30.723  12.045  -1.045 -0.13 +0.10    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -31.365  12.089  -1.774 +0.10 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -33.959   9.735   3.629 -0.24 -0.07    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -33.826  10.299   4.409 +0.16 +0.09    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -31.694  11.389   4.281 -0.17 -0.10    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -32.254  10.854   4.868 +0.13 +0.08    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 8 of 10
+Run: 8 Seed: 712156868 655177103 [ Run 8 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -13.379
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -31.217 8.565 0.441 quatxyzw -0.938869 0.326677 0.076016 0.077644 center 0.057 0.071 -0.099 ntor 12 91.0455 -6.9107 91.3790 6.1903 40.1044 42.0530 -143.6257 -125.9957 -0.8255 42.8915 -74.2616 -49.1428
+State:	-31.217   8.565   0.441  -0.942  0.328  0.076 171.094     91.05   -6.91   91.38    6.19   40.10   42.05 -143.63 -126.00   -0.83   42.89  -74.26  -49.14
+
+DOCKED: MODEL        8
+DOCKED: USER    Run = 8
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.24 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   26.88 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -9.81 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -9.83 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.01 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -3.56 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -3.56 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -31.216991 8.564788 0.440501
+DOCKED: USER    NEWDPF quaternion0 -0.938869 0.326677 0.076016 0.077644
+DOCKED: USER    NEWDPF axisangle0 -0.941712 0.327666 0.076246 171.093706
+DOCKED: USER    NEWDPF quat0 -0.941712 0.327666 0.076246 171.093706
+DOCKED: USER    NEWDPF dihe0 91.05 -6.91 91.38 6.19 40.10 42.05 -143.63 -126.00 -0.83 42.89 -74.26 -49.14 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -32.008   7.701  -0.424 -0.15 +0.09    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -31.854   7.252   0.419 +0.19 -0.05    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -30.974   8.675  -0.695 -0.26 -0.02    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -31.567  10.104  -0.596 -0.29 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -32.585  10.076  -1.766 -0.37 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -32.209  10.273   0.788 -0.32 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -30.506  11.218  -0.816 -0.27 -0.00    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -31.844   9.302  -2.880 -0.26 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -30.681   8.550  -2.197 -0.28 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -31.186  10.034   1.917 -0.23 -0.02    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -30.396   8.677   1.808 -0.25 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -29.254   8.506   2.904 -0.23 +0.01    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -29.910   8.451   0.361 -0.24 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -28.257   7.391   2.474 -0.27 -0.02    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -29.857   8.161   4.316 -0.37 -0.01    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -28.443   9.823   3.060 -0.15 -0.00    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -28.813   5.957   2.529 -0.38 -0.02    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -27.715   7.650   1.084 -0.27 -0.05    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -29.876   5.750   3.601 -0.33 -0.06    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -29.697   6.707   4.771 -0.33 -0.06    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -26.535   7.463   0.798 -0.26 +0.11    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -28.675   8.046   0.035 -0.26 -0.02    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -33.119  11.422  -2.236 -0.41 -0.02    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -34.644  11.345  -2.414 -0.40 -0.01    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -32.856  12.395  -1.216 -0.20 +0.08    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -33.066  13.278  -1.561 +0.13 -0.04    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -32.438  11.899  -3.547 -0.35 -0.04    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -32.052  13.271  -3.416 -0.13 +0.10    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -31.589  13.363  -2.565 +0.12 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -33.318  11.762  -4.804 -0.56 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -32.620  12.311  -6.061 -0.60 -0.01    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -31.257  11.658  -6.374 -0.58 -0.02    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -31.285  10.185  -5.953 -0.49 -0.01    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -30.879  11.770  -7.854 -0.45 -0.02    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -30.253  12.317  -5.600 -0.25 +0.12    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -30.689  12.826  -4.896 +0.15 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -31.898  10.102   3.150 -0.12 +0.01    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -31.321  10.537   3.801 +0.11 +0.00    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -29.817   4.399   4.051 -0.28 +0.19    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -29.315   4.376   4.883 +0.13 -0.12    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -28.404   6.542   5.355 -0.17 +0.18    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -28.096   5.646   5.140 +0.11 -0.11    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 9 of 10
+Run: 9 Seed: 870274704 1939078294 [ Run 9 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.674
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -30.161 7.172 -0.998 quatxyzw -0.715484 0.440822 0.405907 -0.359164 center 0.057 0.071 -0.099 ntor 12 136.8286 104.2340 128.5054 20.1382 38.5957 43.3453 -173.7352 -107.8808 -36.6975 -155.0633 -16.4373 -164.2078
+State:	-30.161   7.172  -0.998  -0.767  0.472  0.435 -137.902    136.83  104.23  128.51   20.14   38.60   43.35 -173.74 -107.88  -36.70 -155.06  -16.44 -164.21
+
+DOCKED: MODEL        9
+DOCKED: USER    Run = 9
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -6.52 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =   16.56 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =  -10.10 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =  -10.01 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   -0.10 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -1.57 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -1.57 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -30.161314 7.171839 -0.997965
+DOCKED: USER    NEWDPF quaternion0 -0.715484 0.440822 0.405907 -0.359164
+DOCKED: USER    NEWDPF axisangle0 -0.766638 0.472339 0.434928 -137.902241
+DOCKED: USER    NEWDPF quat0 -0.766638 0.472339 0.434928 -137.902241
+DOCKED: USER    NEWDPF dihe0 136.83 104.23 128.51 20.14 38.60 43.35 -173.74 -107.88 -36.70 -155.06 -16.44 -164.21 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -31.345   7.766  -1.601 -0.16 +0.10    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -31.428   6.802  -1.623 +0.13 -0.05    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -29.958   8.172  -1.562 -0.25 -0.03    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -29.721   9.315  -2.583 -0.26 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -30.019   8.578  -3.915 -0.30 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -30.696  10.459  -2.270 -0.24 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -28.264   9.854  -2.564 -0.27 -0.01    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -29.389   7.181  -3.711 -0.44 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -29.175   7.011  -2.191 -0.42 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -30.514  10.978  -0.829 -0.21 -0.03    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -30.560   9.860   0.278 -0.21 -0.01    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -30.240  10.392   1.745 -0.21 +0.00    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -29.707   8.646  -0.145 -0.22 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -29.874   9.204   2.681 -0.20 -0.02    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -31.457  11.186   2.348 -0.31 -0.00    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -29.024  11.361   1.722 -0.18 -0.00    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -31.044   8.274   3.049 -0.33 -0.01    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -28.756   8.370   2.092 -0.17 -0.05    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -32.398   8.974   3.088 -0.30 -0.01    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -32.263  10.453   3.425 -0.35 +0.01    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -27.841   7.925   2.782 -0.11 +0.10    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -28.844   8.013   0.663 -0.25 -0.02    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -29.544   9.261  -5.191 -0.34 -0.03    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -30.487  10.422  -5.543 -0.42 -0.01    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -28.246   9.820  -4.949 -0.17 +0.14    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -28.176  10.667  -5.419 +0.12 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -29.429   8.268  -6.380 -0.39 -0.06    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -30.372   7.205  -6.210 -0.02 +0.12    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -30.518   6.803  -7.083 -0.15 -0.11    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -28.029   7.650  -6.555 -0.23 -0.02    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -28.099   6.167  -6.961 -0.56 -0.02    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -28.491   5.923  -8.434 -0.62 -0.02    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -28.633   7.267  -9.156 -0.44 -0.02    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -27.480   5.040  -9.171 -0.60 -0.01    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -29.763   5.273  -8.460 -0.33 +0.20    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -30.389   5.795  -7.932 -0.41 -0.15    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -31.529  11.951  -0.601 -0.15 +0.09    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -31.099  12.752  -0.257 +0.09 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -33.225   8.320   4.046 -0.24 +0.01    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -33.184   8.821   4.877 +0.16 +0.01    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -31.612  10.619   4.686 -0.19 -0.06    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -31.728   9.794   5.187 +0.12 +0.02    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+
+	BEGINNING GENETIC ALGORITHM DOCKING 10 of 10
+Run: 10 Seed: 1949689519 1104653009 [ Run 10 of 10 GA/GALS ]
+Beginning LAMARCKIAN GENETIC ALGORITHM (LGA), with a maximum of 2500000 energy evaluations.
+
+Final-Value: -11.404
+
+
+	FINAL GENETIC ALGORITHM DOCKED STATE
+	_______________________________________________
+
+
+Detailed state:  trans -26.801 9.559 -0.258 quatxyzw -0.503279 -0.510965 0.546377 0.432548 center 0.057 0.071 -0.099 ntor 12 40.9869 -50.5007 10.7001 43.5532 -179.8496 34.4229 -122.6318 -90.8784 34.1908 96.9016 144.9348 -34.7696
+State:	-26.801   9.559  -0.258  -0.558 -0.567  0.606 128.741     40.99  -50.50   10.70   43.55 -179.85   34.42 -122.63  -90.88   34.19   96.90  144.93  -34.77
+
+DOCKED: MODEL       10
+DOCKED: USER    Run = 10
+DOCKED: USER    DPF = ./d.dpf
+DOCKED: USER  
+DOCKED: USER    Estimated Free Energy of Binding    =   -5.25 kcal/mol  [=(1)+(2)+(3)-(4)]
+DOCKED: USER    Estimated Inhibition Constant, Ki   =  140.70 uM (micromolar)  [Temperature = 298.15 K]
+DOCKED: USER    
+DOCKED: USER    (1) Final Intermolecular Energy     =   -8.83 kcal/mol
+DOCKED: USER        vdW + Hbond + desolv Energy     =   -8.89 kcal/mol
+DOCKED: USER        Electrostatic Energy            =   +0.05 kcal/mol
+DOCKED: USER    (2) Final Total Internal Energy     =   -2.57 kcal/mol
+DOCKED: USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+DOCKED: USER    (4) Unbound System's Energy  [=(2)] =   -2.57 kcal/mol
+DOCKED: USER    
+DOCKED: USER    
+DOCKED: USER    NEWDPF move ligand_turkesterone.pdbqt
+DOCKED: USER    NEWDPF about 0.057000 0.071000 -0.099000
+DOCKED: USER    NEWDPF tran0 -26.801212 9.558743 -0.257687
+DOCKED: USER    NEWDPF quaternion0 -0.503279 -0.510965 0.546377 0.432548
+DOCKED: USER    NEWDPF axisangle0 -0.558199 -0.566724 0.606001 128.741287
+DOCKED: USER    NEWDPF quat0 -0.558199 -0.566724 0.606001 128.741287
+DOCKED: USER    NEWDPF dihe0 40.99 -50.50 10.70 43.55 -179.85 34.42 -122.63 -90.88 34.19 96.90 144.93 -34.77 
+DOCKED: USER  keepresnum = 1 
+DOCKED: USER  
+DOCKED: REMARK  12 active torsions:
+DOCKED: REMARK  status: ('A' for Active; 'I' for Inactive)
+DOCKED: REMARK    1  A    between atoms: O_1  and  C_10 
+DOCKED: REMARK    2  A    between atoms: O_2  and  C_17 
+DOCKED: REMARK    3  A    between atoms: O_3  and  C_20 
+DOCKED: REMARK    4  A    between atoms: O_4  and  C_27 
+DOCKED: REMARK    5  A    between atoms: O_6  and  C_29 
+DOCKED: REMARK    6  A    between atoms: O_7  and  C_28 
+DOCKED: REMARK    7  A    between atoms: O_8  and  C_33 
+DOCKED: REMARK    8  A    between atoms: C_11  and  C_20 
+DOCKED: REMARK    9  A    between atoms: C_20  and  C_28 
+DOCKED: REMARK   10  A    between atoms: C_28  and  C_31 
+DOCKED: REMARK   11  A    between atoms: C_31  and  C_32 
+DOCKED: REMARK   12  A    between atoms: C_32  and  C_33 
+DOCKED: USER                              x       y       z     vdW  Elec       q    Type
+DOCKED: USER                           _______ _______ _______ _____ _____    ______ ____
+DOCKED: ROOT
+DOCKED: ATOM      1  O   UNK     0     -25.955   8.385  -0.415 -0.02 +0.14    -0.384 OA
+DOCKED: ATOM      2  H   UNK     0     -25.492   9.159  -0.763 +0.16 -0.08    +0.211 HD
+DOCKED: ENDROOT
+DOCKED: BRANCH   1   3
+DOCKED: ATOM      3  C   UNK     0     -27.388   8.571  -0.454 -0.28 -0.03    +0.090 C 
+DOCKED: ATOM      4  C   UNK     0     -27.887   9.065   0.928 -0.22 +0.00    -0.000 C 
+DOCKED: ATOM      5  C   UNK     0     -27.538   7.842   1.816 -0.29 -0.01    +0.034 C 
+DOCKED: ATOM      6  C   UNK     0     -27.121  10.343   1.296 -0.19 -0.01    +0.045 C 
+DOCKED: ATOM      7  C   UNK     0     -29.415   9.349   0.957 -0.19 -0.01    +0.019 C 
+DOCKED: ATOM      8  C   UNK     0     -27.890   6.628   0.925 -0.33 -0.00    +0.012 C 
+DOCKED: ATOM      9  C   UNK     0     -27.982   7.156  -0.524 -0.41 -0.01    +0.044 C 
+DOCKED: ATOM     10  C   UNK     0     -27.311  11.441   0.230 -0.18 -0.04    +0.128 C 
+DOCKED: ATOM     11  C   UNK     0     -26.999  10.984  -1.243 -0.26 -0.02    +0.055 C 
+DOCKED: ATOM     12  C   UNK     0     -27.326  12.087  -2.344 -0.33 +0.01    -0.021 C 
+DOCKED: ATOM     13  C   UNK     0     -27.640   9.609  -1.529 -0.23 +0.01    -0.034 C 
+DOCKED: ATOM     14  C   UNK     0     -27.416  11.433  -3.754 -0.39 -0.03    +0.071 C 
+DOCKED: ATOM     15  C   UNK     0     -26.242  13.226  -2.358 -0.31 -0.02    +0.045 C 
+DOCKED: ATOM     16  C   UNK     0     -28.697  12.760  -2.054 -0.07 -0.01    +0.017 C 
+DOCKED: ATOM     17  C   UNK     0     -26.077  10.947  -4.338 -0.35 -0.02    +0.047 C 
+DOCKED: ATOM     18  C   UNK     0     -28.395  10.277  -3.757 -0.26 -0.05    +0.154 C 
+DOCKED: ATOM     19  C   UNK     0     -24.873  11.761  -3.877 -0.44 -0.09    +0.147 C 
+DOCKED: ATOM     20  C   UNK     0     -25.255  13.194  -3.530 -0.39 -0.07    +0.147 C 
+DOCKED: ATOM     21  O   UNK     0     -29.173  10.084  -4.689 -0.17 +0.10    -0.293 OA
+DOCKED: ATOM     22  C   UNK     0     -28.326   9.313  -2.642 -0.25 -0.02    +0.057 C 
+DOCKED: BRANCH   5  23
+DOCKED: ATOM     23  C   UNK     0     -28.201   7.783   3.185 -0.22 -0.03    +0.084 C 
+DOCKED: ATOM     24  C   UNK     0     -29.595   7.146   3.062 -0.35 -0.02    +0.049 C 
+DOCKED: BRANCH  23  25
+DOCKED: ATOM     25  O   UNK     0     -27.415   6.933   4.032 -0.09 +0.15    -0.387 OA
+DOCKED: ATOM     26  H   UNK     0     -27.126   7.442   4.807 +0.09 -0.08    +0.210 HD
+DOCKED: ENDBRANCH  23  25
+DOCKED: BRANCH  23  27
+DOCKED: ATOM     27  C   UNK     0     -28.293   9.181   3.854 -0.14 -0.04    +0.152 C 
+DOCKED: BRANCH  27  28
+DOCKED: ATOM     28  O   UNK     0     -27.027   9.525   4.425 -0.04 +0.13    -0.393 OA
+DOCKED: ATOM     29  H   UNK     0     -26.400   8.820   4.187 +0.07 -0.07    +0.210 HD
+DOCKED: ENDBRANCH  27  28
+DOCKED: BRANCH  27  30
+DOCKED: ATOM     30  C   UNK     0     -29.366   9.286   4.955 -0.30 -0.01    +0.037 C 
+DOCKED: BRANCH  30  31
+DOCKED: ATOM     31  C   UNK     0     -29.981  10.696   5.029 -0.29 -0.00    +0.040 C 
+DOCKED: BRANCH  31  32
+DOCKED: ATOM     32  C   UNK     0     -31.256  10.883   4.179 -0.35 +0.00    +0.051 C 
+DOCKED: ATOM     33  C   UNK     0     -32.286   9.813   4.554 -0.50 +0.00    +0.045 C 
+DOCKED: ATOM     34  C   UNK     0     -31.869  12.277   4.342 -0.31 +0.02    +0.045 C 
+DOCKED: BRANCH  32  35
+DOCKED: ATOM     35  O   UNK     0     -30.912  10.699   2.804 -0.08 +0.04    -0.391 OA
+DOCKED: ATOM     36  H   UNK     0     -30.299  11.405   2.540 +0.07 -0.03    +0.210 HD
+DOCKED: ENDBRANCH  32  35
+DOCKED: ENDBRANCH  31  32
+DOCKED: ENDBRANCH  30  31
+DOCKED: ENDBRANCH  27  30
+DOCKED: ENDBRANCH  23  27
+DOCKED: ENDBRANCH   5  23
+DOCKED: BRANCH  10  37
+DOCKED: ATOM     37  O   UNK     0     -26.479  12.536   0.601 -0.09 +0.13    -0.395 OA
+DOCKED: ATOM     38  H   UNK     0     -27.051  13.236   0.958 +0.05 -0.06    +0.210 HD
+DOCKED: ENDBRANCH  10  37
+DOCKED: BRANCH  19  39
+DOCKED: ATOM     39  O   UNK     0     -23.888  11.745  -4.905 -0.29 +0.48    -0.393 OA
+DOCKED: ATOM     40  H   UNK     0     -23.074  11.356  -4.542 -0.24 -0.35    +0.210 HD
+DOCKED: ENDBRANCH  19  39
+DOCKED: BRANCH  20  41
+DOCKED: ATOM     41  O   UNK     0     -25.852  13.836  -4.658 -0.58 +0.11    -0.393 OA
+DOCKED: ATOM     42  H   UNK     0     -25.451  13.457  -5.458 +0.12 -0.05    +0.210 HD
+DOCKED: ENDBRANCH  20  41
+DOCKED: ENDBRANCH   1   3
+DOCKED: TORSDOF 12
+DOCKED: TER
+DOCKED: ENDMDL
+________________________________________________________________________________
+
+DPF> analysis                             # perform a ranked cluster analysis
+
+
+		CLUSTER ANALYSIS OF CONFORMATIONS
+		_________________________________
+
+Number of conformations = 10
+
+RMSD cluster analysis will be performed using the ligand atoms only (42 / 42 total atoms).
+
+Outputting structurally similar clusters, ranked in order of increasing energy.
+
+
+________________________________________________________________________________
+
+Number of distinct conformational clusters found = 6,  out of 10 runs,
+Using an rmsd-tolerance of 2.0 A
+
+
+	CLUSTERING HISTOGRAM
+	____________________
+
+________________________________________________________________________________
+     |           |     |           |     |                                    
+Clus | Lowest    | Run | Mean      | Num | Histogram                          
+-ter | Binding   |     | Binding   | in  |                                    
+Rank | Energy    |     | Energy    | Clus|    5    10   15   20   25   30   35
+_____|___________|_____|___________|_____|____:____|____:____|____:____|____:___
+   1 |     -6.52 |   9 |     -6.03 |   2 |##
+   2 |     -6.52 |   6 |     -6.23 |   4 |####
+   3 |     -6.30 |   2 |     -6.30 |   1 |#
+   4 |     -5.33 |   3 |     -5.33 |   1 |#
+   5 |     -5.25 |  10 |     -5.25 |   1 |#
+   6 |     -4.85 |   4 |     -4.85 |   1 |#
+_____|___________|_____|___________|_____|______________________________________
+
+
+Number of multi-member conformational clusters found = 2, out of 10 runs.
+
+	RMSD TABLE
+	__________
+
+_____________________________________________________________________
+     |      |      |           |         |                 |
+Rank | Sub- | Run  | Binding   | Cluster | Reference       | Grep
+     | Rank |      | Energy    | RMSD    | RMSD            | Pattern
+_____|______|______|___________|_________|_________________|___________
+   1      1      9       -6.52      0.00     24.02           RANKING
+   1      2      7       -5.54      1.45     24.71           RANKING
+   2      1      6       -6.52      0.00     24.87           RANKING
+   2      2      1       -6.38      1.57     24.43           RANKING
+   2      3      8       -6.24      0.77     24.76           RANKING
+   2      4      5       -5.79      1.98     24.57           RANKING
+   3      1      2       -6.30      0.00     24.51           RANKING
+   4      1      3       -5.33      0.00     25.10           RANKING
+   5      1     10       -5.25      0.00     22.06           RANKING
+   6      1      4       -4.85      0.00     23.96           RANKING
+_______________________________________________________________________
+
+
+
+	INFORMATION ENTROPY ANALYSIS FOR THIS CLUSTERING
+	________________________________________________
+
+
+Information entropy for this clustering = 0.70  (rmstol = 2.00 Angstrom)
+
+_______________________________________________________________________
+
+
+	STATISTICAL MECHANICAL ANALYSIS
+	_______________________________
+
+
+Partition function, Q =    10.10            at Temperature, T = 298.15 K
+Free energy,        A ~ -1370.11 kcal/mol   at Temperature, T = 298.15 K
+Internal energy,    U =    -5.87 kcal/mol   at Temperature, T = 298.15 K
+Entropy,            S =     4.58 kcal/mol/K at Temperature, T = 298.15 K
+
+_______________________________________________________________________
+
+
+	LOWEST ENERGY DOCKED CONFORMATION from EACH CLUSTER
+	___________________________________________________
+
+
+
+Keeping original residue number (specified in the input PDBQ file) for outputting.
+
+MODEL        9
+USER    Run = 9
+USER    Cluster Rank = 1
+USER    Number of conformations in this cluster = 2
+USER  
+USER    RMSD from reference structure       = 24.024 A
+USER  
+USER    Estimated Free Energy of Binding    =   -6.52 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   16.56 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -10.10 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -10.01 kcal/mol
+USER        Electrostatic Energy            =   -0.10 kcal/mol
+USER    (2) Final Total Internal Energy     =   -1.57 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -1.57 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ./d.dpf
+USER    NEWDPF move	ligand_turkesterone.pdbqt
+USER    NEWDPF about	0.057000 0.071000 -0.099000
+USER    NEWDPF tran0	-30.161314 7.171839 -0.997965
+USER    NEWDPF axisangle0	-0.766638 0.472339 0.434928 -137.902241
+USER    NEWDPF quaternion0	-0.715484 0.440822 0.405907 -0.359164
+USER    NEWDPF dihe0	136.83 104.23 128.51 20.14 38.60 43.35 -173.74 -107.88 -36.70 -155.06 -16.44 -164.21 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0     -31.345   7.766  -1.601 -0.16 +0.10    -0.384    24.024
+ATOM      2  H   UNK     0     -31.428   6.802  -1.623 +0.13 -0.05    +0.211    24.024
+ATOM      3  C   UNK     0     -29.958   8.172  -1.562 -0.25 -0.03    +0.090    24.024
+ATOM      4  C   UNK     0     -29.721   9.315  -2.583 -0.26 +0.00    -0.000    24.024
+ATOM      5  C   UNK     0     -30.019   8.578  -3.915 -0.30 -0.01    +0.034    24.024
+ATOM      6  C   UNK     0     -30.696  10.459  -2.270 -0.24 -0.01    +0.045    24.024
+ATOM      7  C   UNK     0     -28.264   9.854  -2.564 -0.27 -0.01    +0.019    24.024
+ATOM      8  C   UNK     0     -29.389   7.181  -3.711 -0.44 -0.00    +0.012    24.024
+ATOM      9  C   UNK     0     -29.175   7.011  -2.191 -0.42 -0.01    +0.044    24.024
+ATOM     10  C   UNK     0     -30.514  10.978  -0.829 -0.21 -0.03    +0.128    24.024
+ATOM     11  C   UNK     0     -30.560   9.860   0.278 -0.21 -0.01    +0.055    24.024
+ATOM     12  C   UNK     0     -30.240  10.392   1.745 -0.21 +0.00    -0.021    24.024
+ATOM     13  C   UNK     0     -29.707   8.646  -0.145 -0.22 +0.01    -0.034    24.024
+ATOM     14  C   UNK     0     -29.874   9.204   2.681 -0.20 -0.02    +0.071    24.024
+ATOM     15  C   UNK     0     -31.457  11.186   2.348 -0.31 -0.00    +0.045    24.024
+ATOM     16  C   UNK     0     -29.024  11.361   1.722 -0.18 -0.00    +0.017    24.024
+ATOM     17  C   UNK     0     -31.044   8.274   3.049 -0.33 -0.01    +0.047    24.024
+ATOM     18  C   UNK     0     -28.756   8.370   2.092 -0.17 -0.05    +0.154    24.024
+ATOM     19  C   UNK     0     -32.398   8.974   3.088 -0.30 -0.01    +0.147    24.024
+ATOM     20  C   UNK     0     -32.263  10.453   3.425 -0.35 +0.01    +0.147    24.024
+ATOM     21  O   UNK     0     -27.841   7.925   2.782 -0.11 +0.10    -0.293    24.024
+ATOM     22  C   UNK     0     -28.844   8.013   0.663 -0.25 -0.02    +0.057    24.024
+ATOM     23  C   UNK     0     -29.544   9.261  -5.191 -0.34 -0.03    +0.084    24.024
+ATOM     24  C   UNK     0     -30.487  10.422  -5.543 -0.42 -0.01    +0.049    24.024
+ATOM     25  O   UNK     0     -28.246   9.820  -4.949 -0.17 +0.14    -0.387    24.024
+ATOM     26  H   UNK     0     -28.176  10.667  -5.419 +0.12 -0.07    +0.210    24.024
+ATOM     27  C   UNK     0     -29.429   8.268  -6.380 -0.39 -0.06    +0.152    24.024
+ATOM     28  O   UNK     0     -30.372   7.205  -6.210 -0.02 +0.12    -0.393    24.024
+ATOM     29  H   UNK     0     -30.518   6.803  -7.083 -0.15 -0.11    +0.210    24.024
+ATOM     30  C   UNK     0     -28.029   7.650  -6.555 -0.23 -0.02    +0.037    24.024
+ATOM     31  C   UNK     0     -28.099   6.167  -6.961 -0.56 -0.02    +0.040    24.024
+ATOM     32  C   UNK     0     -28.491   5.923  -8.434 -0.62 -0.02    +0.051    24.024
+ATOM     33  C   UNK     0     -28.633   7.267  -9.156 -0.44 -0.02    +0.045    24.024
+ATOM     34  C   UNK     0     -27.480   5.040  -9.171 -0.60 -0.01    +0.045    24.024
+ATOM     35  O   UNK     0     -29.763   5.273  -8.460 -0.33 +0.20    -0.391    24.024
+ATOM     36  H   UNK     0     -30.389   5.795  -7.932 -0.41 -0.15    +0.210    24.024
+ATOM     37  O   UNK     0     -31.529  11.951  -0.601 -0.15 +0.09    -0.395    24.024
+ATOM     38  H   UNK     0     -31.099  12.752  -0.257 +0.09 -0.05    +0.210    24.024
+ATOM     39  O   UNK     0     -33.225   8.320   4.046 -0.24 +0.01    -0.393    24.024
+ATOM     40  H   UNK     0     -33.184   8.821   4.877 +0.16 +0.01    +0.210    24.024
+ATOM     41  O   UNK     0     -31.612  10.619   4.686 -0.19 -0.06    -0.393    24.024
+ATOM     42  H   UNK     0     -31.728   9.794   5.187 +0.12 +0.02    +0.210    24.024
+TER
+ENDMDL
+MODEL        6
+USER    Run = 6
+USER    Cluster Rank = 2
+USER    Number of conformations in this cluster = 4
+USER  
+USER    RMSD from reference structure       = 24.870 A
+USER  
+USER    Estimated Free Energy of Binding    =   -6.52 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   16.62 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =  -10.10 kcal/mol
+USER        vdW + Hbond + desolv Energy     =  -10.12 kcal/mol
+USER        Electrostatic Energy            =   +0.02 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.57 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.57 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ./d.dpf
+USER    NEWDPF move	ligand_turkesterone.pdbqt
+USER    NEWDPF about	0.057000 0.071000 -0.099000
+USER    NEWDPF tran0	-31.667837 8.383442 -1.403159
+USER    NEWDPF axisangle0	0.204024 0.043205 0.978012 -120.918919
+USER    NEWDPF quaternion0	0.177502 0.037589 0.850877 -0.493039
+USER    NEWDPF dihe0	75.42 171.56 120.06 3.29 35.09 53.08 -6.33 41.78 -113.62 -168.92 10.44 119.91 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0     -32.110   7.770  -0.159 -0.08 +0.09    -0.384    24.870
+ATOM      2  H   UNK     0     -32.877   7.921  -0.730 +0.12 -0.05    +0.211    24.870
+ATOM      3  C   UNK     0     -31.038   8.689  -0.470 -0.26 -0.02    +0.090    24.870
+ATOM      4  C   UNK     0     -31.540  10.147  -0.308 -0.29 +0.00    -0.000    24.870
+ATOM      5  C   UNK     0     -32.624  10.205  -1.416 -0.37 -0.01    +0.034    24.870
+ATOM      6  C   UNK     0     -32.091  10.319   1.115 -0.32 -0.01    +0.045    24.870
+ATOM      7  C   UNK     0     -30.431  11.204  -0.566 -0.26 -0.00    +0.019    24.870
+ATOM      8  C   UNK     0     -31.994   9.417  -2.588 -0.31 -0.00    +0.012    24.870
+ATOM      9  C   UNK     0     -30.839   8.585  -1.989 -0.29 -0.01    +0.044    24.870
+ATOM     10  C   UNK     0     -31.021   9.995   2.177 -0.22 -0.02    +0.128    24.870
+ATOM     11  C   UNK     0     -30.319   8.599   1.994 -0.26 -0.01    +0.055    24.870
+ATOM     12  C   UNK     0     -29.128   8.337   3.018 -0.24 +0.01    -0.021    24.870
+ATOM     13  C   UNK     0     -29.931   8.380   0.516 -0.25 +0.01    -0.034    24.870
+ATOM     14  C   UNK     0     -28.223   7.178   2.507 -0.29 -0.02    +0.071    24.870
+ATOM     15  C   UNK     0     -29.668   7.993   4.455 -0.37 -0.01    +0.045    24.870
+ATOM     16  C   UNK     0     -28.234   9.602   3.153 -0.15 -0.00    +0.017    24.870
+ATOM     17  C   UNK     0     -28.857   5.776   2.564 -0.40 -0.02    +0.047    24.870
+ATOM     18  C   UNK     0     -27.748   7.439   1.093 -0.28 -0.05    +0.154    24.870
+ATOM     19  C   UNK     0     -29.868   5.604   3.693 -0.33 -0.06    +0.147    24.870
+ATOM     20  C   UNK     0     -29.567   6.522   4.870 -0.33 -0.06    +0.147    24.870
+ATOM     21  O   UNK     0     -26.598   7.192   0.735 -0.28 +0.10    -0.293    24.870
+ATOM     22  C   UNK     0     -28.741   7.914   0.110 -0.27 -0.02    +0.057    24.870
+ATOM     23  C   UNK     0     -33.105  11.590  -1.826 -0.42 -0.02    +0.084    24.870
+ATOM     24  C   UNK     0     -33.475  12.405  -0.576 -0.42 -0.01    +0.049    24.870
+ATOM     25  O   UNK     0     -32.024  12.271  -2.477 -0.17 +0.10    -0.387    24.870
+ATOM     26  H   UNK     0     -32.389  12.952  -3.065 +0.14 -0.05    +0.210    24.870
+ATOM     27  C   UNK     0     -34.302  11.528  -2.813 -0.45 -0.04    +0.152    24.870
+ATOM     28  O   UNK     0     -34.858  10.209  -2.810 -0.26 +0.15    -0.393    24.870
+ATOM     29  H   UNK     0     -34.987   9.945  -3.737 +0.11 -0.10    +0.210    24.870
+ATOM     30  C   UNK     0     -33.945  11.899  -4.266 -0.51 -0.01    +0.037    24.870
+ATOM     31  C   UNK     0     -32.956  10.898  -4.891 -0.54 -0.01    +0.040    24.870
+ATOM     32  C   UNK     0     -31.794  11.549  -5.671 -0.53 -0.01    +0.051    24.870
+ATOM     33  C   UNK     0     -30.764  10.478  -6.045 -0.48 -0.01    +0.045    24.870
+ATOM     34  C   UNK     0     -32.269  12.277  -6.931 -0.64 -0.01    +0.045    24.870
+ATOM     35  O   UNK     0     -31.152  12.496  -4.816 -0.14 +0.11    -0.391    24.870
+ATOM     36  H   UNK     0     -31.035  12.094  -3.939 +0.13 -0.06    +0.210    24.870
+ATOM     37  O   UNK     0     -31.656  10.073   3.450 -0.12 +0.01    -0.395    24.870
+ATOM     38  H   UNK     0     -31.005  10.416   4.086 +0.11 -0.00    +0.210    24.870
+ATOM     39  O   UNK     0     -29.862   4.242   4.110 -0.29 +0.20    -0.393    24.870
+ATOM     40  H   UNK     0     -29.252   4.156   4.862 +0.13 -0.12    +0.210    24.870
+ATOM     41  O   UNK     0     -28.254   6.270   5.374 -0.16 +0.19    -0.393    24.870
+ATOM     42  H   UNK     0     -27.942   5.439   4.978 +0.12 -0.10    +0.210    24.870
+TER
+ENDMDL
+MODEL        2
+USER    Run = 2
+USER    Cluster Rank = 3
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 24.513 A
+USER  
+USER    Estimated Free Energy of Binding    =   -6.30 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =   24.30 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -9.87 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -9.82 kcal/mol
+USER        Electrostatic Energy            =   -0.05 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.51 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.51 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ./d.dpf
+USER    NEWDPF move	ligand_turkesterone.pdbqt
+USER    NEWDPF about	0.057000 0.071000 -0.099000
+USER    NEWDPF tran0	-30.523200 9.213716 -1.780638
+USER    NEWDPF axisangle0	0.023422 0.678620 -0.734116 -156.466942
+USER    NEWDPF quaternion0	0.022930 0.664360 -0.718690 -0.203924
+USER    NEWDPF dihe0	7.31 -98.91 15.24 99.81 -93.54 51.67 33.02 -50.07 68.83 69.04 149.48 -47.86 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0     -29.956   8.137  -2.580 -0.09 +0.11    -0.384    24.513
+ATOM      2  H   UNK     0     -30.309   8.819  -3.169 +0.12 -0.06    +0.211    24.513
+ATOM      3  C   UNK     0     -30.625   8.157  -1.298 -0.27 -0.02    +0.090    24.513
+ATOM      4  C   UNK     0     -29.652   8.685  -0.212 -0.23 +0.00    -0.000    24.513
+ATOM      5  C   UNK     0     -28.571   7.573  -0.227 -0.33 -0.01    +0.034    24.513
+ATOM      6  C   UNK     0     -29.137  10.064  -0.647 -0.19 -0.01    +0.045    24.513
+ATOM      7  C   UNK     0     -30.311   8.795   1.191 -0.25 -0.00    +0.019    24.513
+ATOM      8  C   UNK     0     -29.387   6.269  -0.387 -0.21 -0.00    +0.012    24.513
+ATOM      9  C   UNK     0     -30.784   6.683  -0.899 -0.35 -0.01    +0.044    24.513
+ATOM     10  C   UNK     0     -30.296  11.058  -0.861 -0.21 -0.03    +0.128    24.513
+ATOM     11  C   UNK     0     -31.433  10.539  -1.817 -0.26 -0.01    +0.055    24.513
+ATOM     12  C   UNK     0     -32.683  11.520  -1.924 -0.42 +0.01    -0.021    24.513
+ATOM     13  C   UNK     0     -31.811   9.084  -1.466 -0.34 +0.01    -0.034    24.513
+ATOM     14  C   UNK     0     -33.913  10.765  -2.506 -0.51 -0.02    +0.071    24.513
+ATOM     15  C   UNK     0     -32.358  12.771  -2.821 -0.44 -0.01    +0.045    24.513
+ATOM     16  C   UNK     0     -33.083  12.052  -0.519 -0.46 -0.00    +0.017    24.513
+ATOM     17  C   UNK     0     -33.812  10.395  -3.997 -0.44 -0.02    +0.047    24.513
+ATOM     18  C   UNK     0     -34.207   9.509  -1.713 -0.43 -0.05    +0.154    24.513
+ATOM     19  C   UNK     0     -32.973  11.370  -4.817 -0.45 -0.04    +0.147    24.513
+ATOM     20  C   UNK     0     -32.984  12.770  -4.219 -0.28 -0.04    +0.147    24.513
+ATOM     21  O   UNK     0     -35.355   9.166  -1.436 -0.30 +0.10    -0.293    24.513
+ATOM     22  C   UNK     0     -33.070   8.637  -1.358 -0.42 -0.01    +0.057    24.513
+ATOM     23  C   UNK     0     -27.620   7.533   0.961 -0.32 -0.03    +0.084    24.513
+ATOM     24  C   UNK     0     -28.205   6.642   2.069 -0.33 -0.02    +0.049    24.513
+ATOM     25  O   UNK     0     -26.389   6.933   0.535 -0.27 +0.14    -0.387    24.513
+ATOM     26  H   UNK     0     -25.810   7.624   0.174 +0.05 -0.08    +0.210    24.513
+ATOM     27  C   UNK     0     -27.303   8.951   1.508 -0.19 -0.05    +0.152    24.513
+ATOM     28  O   UNK     0     -25.965   9.315   1.152 -0.14 +0.15    -0.393    24.513
+ATOM     29  H   UNK     0     -25.400   8.542   1.319 -0.01 -0.10    +0.210    24.513
+ATOM     30  C   UNK     0     -27.452   9.088   3.036 -0.18 -0.01    +0.037    24.513
+ATOM     31  C   UNK     0     -28.617  10.018   3.421 -0.15 -0.01    +0.040    24.513
+ATOM     32  C   UNK     0     -29.546   9.460   4.520 -0.28 -0.01    +0.051    24.513
+ATOM     33  C   UNK     0     -30.965  10.000   4.315 -0.35 -0.00    +0.045    24.513
+ATOM     34  C   UNK     0     -29.570   7.929   4.545 -0.37 -0.01    +0.045    24.513
+ATOM     35  O   UNK     0     -29.077   9.926   5.786 -0.15 +0.09    -0.391    24.513
+ATOM     36  H   UNK     0     -28.169   9.604   5.918 +0.07 -0.07    +0.210    24.513
+ATOM     37  O   UNK     0     -29.728  12.263  -1.367 -0.15 +0.11    -0.395    24.513
+ATOM     38  H   UNK     0     -28.977  12.499  -0.796 +0.06 -0.06    +0.210    24.513
+ATOM     39  O   UNK     0     -33.473  11.395  -6.150 -0.23 +0.11    -0.393    24.513
+ATOM     40  H   UNK     0     -33.788  10.503  -6.375 -0.40 -0.10    +0.210    24.513
+ATOM     41  O   UNK     0     -34.322  13.263  -4.130 -0.05 +0.09    -0.393    24.513
+ATOM     42  H   UNK     0     -34.885  12.685  -4.673 +0.34 -0.04    +0.210    24.513
+TER
+ENDMDL
+MODEL        3
+USER    Run = 3
+USER    Cluster Rank = 4
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 25.098 A
+USER  
+USER    Estimated Free Energy of Binding    =   -5.33 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =  123.41 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -8.91 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -8.82 kcal/mol
+USER        Electrostatic Energy            =   -0.09 kcal/mol
+USER    (2) Final Total Internal Energy     =   -4.03 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -4.03 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ./d.dpf
+USER    NEWDPF move	ligand_turkesterone.pdbqt
+USER    NEWDPF about	0.057000 0.071000 -0.099000
+USER    NEWDPF tran0	-33.428780 10.907378 -0.642537
+USER    NEWDPF axisangle0	-0.157626 0.954965 0.251386 -109.652050
+USER    NEWDPF quaternion0	-0.128844 0.780595 0.205485 -0.576061
+USER    NEWDPF dihe0	12.34 -81.77 41.66 47.06 39.60 48.13 -179.63 -27.22 48.88 35.83 127.86 179.97 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0     -32.944  12.276  -0.752 -0.22 +0.07    -0.384    25.098
+ATOM      2  H   UNK     0     -33.911  12.278  -0.783 +0.16 -0.03    +0.211    25.098
+ATOM      3  C   UNK     0     -32.409  11.009  -1.199 -0.32 -0.02    +0.090    25.098
+ATOM      4  C   UNK     0     -31.534  11.229  -2.460 -0.34 +0.00    -0.000    25.098
+ATOM      5  C   UNK     0     -32.600  11.737  -3.466 -0.44 -0.01    +0.034    25.098
+ATOM      6  C   UNK     0     -30.448  12.262  -2.126 -0.27 -0.01    +0.045    25.098
+ATOM      7  C   UNK     0     -30.868   9.923  -2.974 -0.28 -0.01    +0.019    25.098
+ATOM      8  C   UNK     0     -33.837  10.859  -3.165 -0.57 -0.00    +0.012    25.098
+ATOM      9  C   UNK     0     -33.608  10.238  -1.769 -0.49 -0.01    +0.044    25.098
+ATOM     10  C   UNK     0     -29.577  11.801  -0.940 -0.22 -0.04    +0.128    25.098
+ATOM     11  C   UNK     0     -30.388  11.381   0.342 -0.22 -0.01    +0.055    25.098
+ATOM     12  C   UNK     0     -29.484  10.784   1.509 -0.19 +0.00    -0.021    25.098
+ATOM     13  C   UNK     0     -31.580  10.481  -0.045 -0.29 +0.01    -0.034    25.098
+ATOM     14  C   UNK     0     -30.365  10.004   2.528 -0.20 -0.01    +0.071    25.098
+ATOM     15  C   UNK     0     -28.688  11.917   2.258 -0.15 -0.01    +0.045    25.098
+ATOM     16  C   UNK     0     -28.437   9.788   0.937 -0.17 -0.00    +0.017    25.098
+ATOM     17  C   UNK     0     -31.285  10.875   3.402 -0.31 -0.00    +0.047    25.098
+ATOM     18  C   UNK     0     -31.206   8.956   1.830 -0.23 -0.03    +0.154    25.098
+ATOM     19  C   UNK     0     -30.731  12.267   3.682 -0.19 +0.01    +0.147    25.098
+ATOM     20  C   UNK     0     -29.209  12.290   3.649 -0.14 -0.02    +0.147    25.098
+ATOM     21  O   UNK     0     -31.378   7.835   2.305 -0.01 +0.07    -0.293    25.098
+ATOM     22  C   UNK     0     -31.909   9.349   0.594 -0.29 -0.01    +0.057    25.098
+ATOM     23  C   UNK     0     -32.209  11.722  -4.937 -0.46 -0.02    +0.084    25.098
+ATOM     24  C   UNK     0     -32.067  10.271  -5.425 -0.43 -0.01    +0.049    25.098
+ATOM     25  O   UNK     0     -33.266  12.327  -5.693 -0.25 +0.09    -0.387    25.098
+ATOM     26  H   UNK     0     -33.078  13.274  -5.796 +0.19 -0.05    +0.210    25.098
+ATOM     27  C   UNK     0     -30.904  12.521  -5.206 -0.27 -0.05    +0.152    25.098
+ATOM     28  O   UNK     0     -31.033  13.252  -6.430 -0.35 +0.12    -0.393    25.098
+ATOM     29  H   UNK     0     -31.668  12.773  -6.989 +0.19 -0.06    +0.210    25.098
+ATOM     30  C   UNK     0     -29.636  11.650  -5.293 -0.43 -0.01    +0.037    25.098
+ATOM     31  C   UNK     0     -28.479  12.230  -4.459 -0.29 -0.01    +0.040    25.098
+ATOM     32  C   UNK     0     -27.424  11.193  -4.018 -0.41 -0.02    +0.051    25.098
+ATOM     33  C   UNK     0     -27.848   9.797  -4.489 -0.34 -0.02    +0.045    25.098
+ATOM     34  C   UNK     0     -26.025  11.518  -4.547 -0.42 -0.02    +0.045    25.098
+ATOM     35  O   UNK     0     -27.376  11.179  -2.590 -0.12 +0.14    -0.391    25.098
+ATOM     36  H   UNK     0     -27.547  12.078  -2.265 +0.09 -0.07    +0.210    25.098
+ATOM     37  O   UNK     0     -28.680  12.867  -0.638 -0.05 +0.11    -0.395    25.098
+ATOM     38  H   UNK     0     -27.812  12.639  -1.013 +0.07 -0.07    +0.210    25.098
+ATOM     39  O   UNK     0     -31.207  12.704   4.951 -0.29 -0.17    -0.393    25.098
+ATOM     40  H   UNK     0     -30.510  12.547   5.609 +0.09 +0.05    +0.210    25.098
+ATOM     41  O   UNK     0     -28.677  11.373   4.606 -0.03 +0.07    -0.393    25.098
+ATOM     42  H   UNK     0     -29.386  11.162   5.237 +0.08 -0.02    +0.210    25.098
+TER
+ENDMDL
+MODEL       10
+USER    Run = 10
+USER    Cluster Rank = 5
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 22.057 A
+USER  
+USER    Estimated Free Energy of Binding    =   -5.25 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =  140.70 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -8.83 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -8.89 kcal/mol
+USER        Electrostatic Energy            =   +0.05 kcal/mol
+USER    (2) Final Total Internal Energy     =   -2.57 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -2.57 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ./d.dpf
+USER    NEWDPF move	ligand_turkesterone.pdbqt
+USER    NEWDPF about	0.057000 0.071000 -0.099000
+USER    NEWDPF tran0	-26.801212 9.558743 -0.257687
+USER    NEWDPF axisangle0	-0.558199 -0.566724 0.606001 128.741287
+USER    NEWDPF quaternion0	-0.503279 -0.510965 0.546377 0.432548
+USER    NEWDPF dihe0	40.99 -50.50 10.70 43.55 -179.85 34.42 -122.63 -90.88 34.19 96.90 144.93 -34.77 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0     -25.955   8.385  -0.415 -0.02 +0.14    -0.384    22.057
+ATOM      2  H   UNK     0     -25.492   9.159  -0.763 +0.16 -0.08    +0.211    22.057
+ATOM      3  C   UNK     0     -27.388   8.571  -0.454 -0.28 -0.03    +0.090    22.057
+ATOM      4  C   UNK     0     -27.887   9.065   0.928 -0.22 +0.00    -0.000    22.057
+ATOM      5  C   UNK     0     -27.538   7.842   1.816 -0.29 -0.01    +0.034    22.057
+ATOM      6  C   UNK     0     -27.121  10.343   1.296 -0.19 -0.01    +0.045    22.057
+ATOM      7  C   UNK     0     -29.415   9.349   0.957 -0.19 -0.01    +0.019    22.057
+ATOM      8  C   UNK     0     -27.890   6.628   0.925 -0.33 -0.00    +0.012    22.057
+ATOM      9  C   UNK     0     -27.982   7.156  -0.524 -0.41 -0.01    +0.044    22.057
+ATOM     10  C   UNK     0     -27.311  11.441   0.230 -0.18 -0.04    +0.128    22.057
+ATOM     11  C   UNK     0     -26.999  10.984  -1.243 -0.26 -0.02    +0.055    22.057
+ATOM     12  C   UNK     0     -27.326  12.087  -2.344 -0.33 +0.01    -0.021    22.057
+ATOM     13  C   UNK     0     -27.640   9.609  -1.529 -0.23 +0.01    -0.034    22.057
+ATOM     14  C   UNK     0     -27.416  11.433  -3.754 -0.39 -0.03    +0.071    22.057
+ATOM     15  C   UNK     0     -26.242  13.226  -2.358 -0.31 -0.02    +0.045    22.057
+ATOM     16  C   UNK     0     -28.697  12.760  -2.054 -0.07 -0.01    +0.017    22.057
+ATOM     17  C   UNK     0     -26.077  10.947  -4.338 -0.35 -0.02    +0.047    22.057
+ATOM     18  C   UNK     0     -28.395  10.277  -3.757 -0.26 -0.05    +0.154    22.057
+ATOM     19  C   UNK     0     -24.873  11.761  -3.877 -0.44 -0.09    +0.147    22.057
+ATOM     20  C   UNK     0     -25.255  13.194  -3.530 -0.39 -0.07    +0.147    22.057
+ATOM     21  O   UNK     0     -29.173  10.084  -4.689 -0.17 +0.10    -0.293    22.057
+ATOM     22  C   UNK     0     -28.326   9.313  -2.642 -0.25 -0.02    +0.057    22.057
+ATOM     23  C   UNK     0     -28.201   7.783   3.185 -0.22 -0.03    +0.084    22.057
+ATOM     24  C   UNK     0     -29.595   7.146   3.062 -0.35 -0.02    +0.049    22.057
+ATOM     25  O   UNK     0     -27.415   6.933   4.032 -0.09 +0.15    -0.387    22.057
+ATOM     26  H   UNK     0     -27.126   7.442   4.807 +0.09 -0.08    +0.210    22.057
+ATOM     27  C   UNK     0     -28.293   9.181   3.854 -0.14 -0.04    +0.152    22.057
+ATOM     28  O   UNK     0     -27.027   9.525   4.425 -0.04 +0.13    -0.393    22.057
+ATOM     29  H   UNK     0     -26.400   8.820   4.187 +0.07 -0.07    +0.210    22.057
+ATOM     30  C   UNK     0     -29.366   9.286   4.955 -0.30 -0.01    +0.037    22.057
+ATOM     31  C   UNK     0     -29.981  10.696   5.029 -0.29 -0.00    +0.040    22.057
+ATOM     32  C   UNK     0     -31.256  10.883   4.179 -0.35 +0.00    +0.051    22.057
+ATOM     33  C   UNK     0     -32.286   9.813   4.554 -0.50 +0.00    +0.045    22.057
+ATOM     34  C   UNK     0     -31.869  12.277   4.342 -0.31 +0.02    +0.045    22.057
+ATOM     35  O   UNK     0     -30.912  10.699   2.804 -0.08 +0.04    -0.391    22.057
+ATOM     36  H   UNK     0     -30.299  11.405   2.540 +0.07 -0.03    +0.210    22.057
+ATOM     37  O   UNK     0     -26.479  12.536   0.601 -0.09 +0.13    -0.395    22.057
+ATOM     38  H   UNK     0     -27.051  13.236   0.958 +0.05 -0.06    +0.210    22.057
+ATOM     39  O   UNK     0     -23.888  11.745  -4.905 -0.29 +0.48    -0.393    22.057
+ATOM     40  H   UNK     0     -23.074  11.356  -4.542 -0.24 -0.35    +0.210    22.057
+ATOM     41  O   UNK     0     -25.852  13.836  -4.658 -0.58 +0.11    -0.393    22.057
+ATOM     42  H   UNK     0     -25.451  13.457  -5.458 +0.12 -0.05    +0.210    22.057
+TER
+ENDMDL
+MODEL        4
+USER    Run = 4
+USER    Cluster Rank = 6
+USER    Number of conformations in this cluster = 1
+USER  
+USER    RMSD from reference structure       = 23.956 A
+USER  
+USER    Estimated Free Energy of Binding    =   -4.85 kcal/mol  [=(1)+(2)+(3)-(4)]
+USER    Estimated Inhibition Constant, Ki   =  278.07 uM (micromolar)  [Temperature = 298.15 K]
+USER    
+USER    (1) Final Intermolecular Energy     =   -8.43 kcal/mol
+USER        vdW + Hbond + desolv Energy     =   -8.42 kcal/mol
+USER        Electrostatic Energy            =   -0.01 kcal/mol
+USER    (2) Final Total Internal Energy     =   -3.72 kcal/mol
+USER    (3) Torsional Free Energy           =   +3.58 kcal/mol
+USER    (4) Unbound System's Energy  [=(2)] =   -3.72 kcal/mol
+USER    
+USER    
+USER  
+USER    DPF = ./d.dpf
+USER    NEWDPF move	ligand_turkesterone.pdbqt
+USER    NEWDPF about	0.057000 0.071000 -0.099000
+USER    NEWDPF tran0	-29.806140 10.240461 -1.600668
+USER    NEWDPF axisangle0	0.151840 -0.369588 -0.916706 71.787176
+USER    NEWDPF quaternion0	0.089021 -0.216682 -0.537448 0.810107
+USER    NEWDPF dihe0	60.87 -32.02 179.62 51.58 37.00 40.68 -179.05 -67.68 83.63 -0.58 9.26 -52.79 
+USER  
+USER                              x       y       z    vdW   Elec        q     RMS 
+ATOM      1  O   UNK     0     -30.416  11.049  -0.555 -0.10 +0.10    -0.384    23.956
+ATOM      2  H   UNK     0     -30.899  11.183  -1.383 +0.09 -0.05    +0.211    23.956
+ATOM      3  C   UNK     0     -29.052  10.639  -0.805 -0.19 -0.03    +0.090    23.956
+ATOM      4  C   UNK     0     -28.840   9.195  -0.283 -0.21 +0.00    -0.000    23.956
+ATOM      5  C   UNK     0     -29.059   9.402   1.238 -0.17 -0.01    +0.034    23.956
+ATOM      6  C   UNK     0     -29.879   8.278  -0.945 -0.25 -0.01    +0.045    23.956
+ATOM      7  C   UNK     0     -27.412   8.650  -0.566 -0.30 -0.01    +0.019    23.956
+ATOM      8  C   UNK     0     -28.368  10.754   1.528 -0.16 -0.00    +0.012    23.956
+ATOM      9  C   UNK     0     -28.194  11.462   0.166 -0.20 -0.01    +0.044    23.956
+ATOM     10  C   UNK     0     -29.768   8.318  -2.483 -0.23 -0.04    +0.128    23.956
+ATOM     11  C   UNK     0     -29.794   9.764  -3.103 -0.24 -0.02    +0.055    23.956
+ATOM     12  C   UNK     0     -29.546   9.795  -4.676 -0.35 +0.01    -0.021    23.956
+ATOM     13  C   UNK     0     -28.869  10.709  -2.308 -0.25 +0.01    -0.034    23.956
+ATOM     14  C   UNK     0     -29.152  11.230  -5.132 -0.32 -0.02    +0.071    23.956
+ATOM     15  C   UNK     0     -30.819   9.319  -5.469 -0.26 -0.01    +0.045    23.956
+ATOM     16  C   UNK     0     -28.380   8.844  -5.065 -0.31 -0.01    +0.017    23.956
+ATOM     17  C   UNK     0     -30.286  12.270  -5.079 -0.37 -0.01    +0.047    23.956
+ATOM     18  C   UNK     0     -27.977  11.752  -4.332 -0.38 -0.05    +0.154    23.956
+ATOM     19  C   UNK     0     -31.673  11.679  -5.307 -0.41 -0.04    +0.147    23.956
+ATOM     20  C   UNK     0     -31.622  10.423  -6.165 -0.45 -0.04    +0.147    23.956
+ATOM     21  O   UNK     0     -27.063  12.387  -4.854 -0.36 +0.10    -0.293    23.956
+ATOM     22  C   UNK     0     -28.002  11.564  -2.869 -0.31 -0.02    +0.057    23.956
+ATOM     23  C   UNK     0     -28.578   8.284   2.154 -0.20 -0.03    +0.084    23.956
+ATOM     24  C   UNK     0     -29.129   6.935   1.663 -0.35 -0.01    +0.049    23.956
+ATOM     25  O   UNK     0     -27.148   8.218   2.075 -0.10 +0.13    -0.387    23.956
+ATOM     26  H   UNK     0     -26.792   8.036   2.960 +0.07 -0.08    +0.210    23.956
+ATOM     27  C   UNK     0     -28.971   8.529   3.636 -0.18 -0.04    +0.152    23.956
+ATOM     28  O   UNK     0     -28.428   7.488   4.454 -0.10 +0.15    -0.393    23.956
+ATOM     29  H   UNK     0     -27.672   7.107   3.977 +0.10 -0.08    +0.210    23.956
+ATOM     30  C   UNK     0     -30.490   8.600   3.885 -0.36 -0.01    +0.037    23.956
+ATOM     31  C   UNK     0     -30.997  10.052   3.956 -0.33 -0.00    +0.040    23.956
+ATOM     32  C   UNK     0     -31.975  10.444   2.829 -0.35 -0.00    +0.051    23.956
+ATOM     33  C   UNK     0     -32.158   9.261   1.873 -0.25 -0.01    +0.045    23.956
+ATOM     34  C   UNK     0     -33.336  10.896   3.366 -0.51 +0.01    +0.045    23.956
+ATOM     35  O   UNK     0     -31.401  11.523   2.089 -0.14 +0.03    -0.391    23.956
+ATOM     36  H   UNK     0     -31.062  11.175   1.247 +0.08 -0.03    +0.210    23.956
+ATOM     37  O   UNK     0     -30.836   7.531  -3.002 -0.11 +0.09    -0.395    23.956
+ATOM     38  H   UNK     0     -30.484   6.646  -3.200 +0.14 -0.05    +0.210    23.956
+ATOM     39  O   UNK     0     -32.497  12.667  -5.920 -0.25 +0.10    -0.393    23.956
+ATOM     40  H   UNK     0     -32.486  12.519  -6.881 +0.19 -0.05    +0.210    23.956
+ATOM     41  O   UNK     0     -31.020  10.709  -7.429 -0.23 +0.12    -0.393    23.956
+ATOM     42  H   UNK     0     -31.148  11.655  -7.609 +0.18 -0.07    +0.210    23.956
+TER
+ENDMDL
+
+
+AVSFLD: # AVS field file
+AVSFLD: #
+AVSFLD: # Created by AutoDock
+AVSFLD: #
+AVSFLD: ndim=2           # number of dimensions in the field
+AVSFLD: nspace=1         # number of physical coordinates
+AVSFLD: veclen=7         # vector size
+AVSFLD: dim1=42          # atoms
+AVSFLD: dim2=6           # conformations
+AVSFLD: data=Real       # data type (byte,integer,Real,double)
+AVSFLD: field=uniform    # field coordinate layout
+AVSFLD: label= x y z vdW Elec q RMS
+AVSFLD: variable 1 file = ./d.dlg.pdb filetype = ascii offset = 5 stride = 12
+AVSFLD: variable 2 file = ./d.dlg.pdb filetype = ascii offset = 6 stride = 12
+AVSFLD: variable 3 file = ./d.dlg.pdb filetype = ascii offset = 7 stride = 12
+AVSFLD: variable 4 file = ./d.dlg.pdb filetype = ascii offset = 8 stride = 12
+AVSFLD: variable 5 file = ./d.dlg.pdb filetype = ascii offset = 9 stride = 12
+AVSFLD: variable 6 file = ./d.dlg.pdb filetype = ascii offset = 10 stride = 12
+AVSFLD: variable 7 file = ./d.dlg.pdb filetype = ascii offset = 11 stride = 12
+AVSFLD: # end of file
+
+>>> Closing the docking parameter file (DPF)...
+This docking finished at:			5:16 22" p.m., 02/15/2023
+
+
+________________________________________________________________________________
+
+autodock4: Successful Completion on "dev"
+
+Real= 3m 53.76s,  CPU= 3m 53.64s,  System= 0.03s
+________________________________________________________________________________
+
