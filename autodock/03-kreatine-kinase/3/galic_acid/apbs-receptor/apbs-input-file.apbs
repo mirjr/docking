@@ -1,0 +1,37 @@
+READ
+	mol pqr receptor.pqr
+END
+
+ELEC
+	mg-auto
+	mol 1
+	lpbe
+	bcfl sdh
+	chgm spl2
+	srfm spl2
+	swin 0.300
+	calcenergy total
+	calcforce no
+	write pot dx receptor.potential
+
+	dime 65 65 65
+
+	cglen 97.008 99.646 98.762
+	cgcent 24.534 28.001 21.172
+	fglen 68.005 69.764 69.175
+	fgcent 24.534 28.001 21.172
+
+	temp 298.150
+	srad 1.400
+	sdie 78.540
+	pdie 2.000
+	ion 1.000, 0.010, 2.000
+	ion -1.000, 0.010, 2.000
+
+END
+
+PRINT
+	elecEnergy 1
+END
+
+QUIT
